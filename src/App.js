@@ -5,9 +5,10 @@ import HeaderNav from "./components/HeaderNav/HeaderNav";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import Vacancies from "./components/Vacancies/Vacancies";
-import Companies from "./components/Companies";
-import Employees from "./components/Employees";
-import News from "./components/News";
+import Companies from "./components/Companies/Companies";
+import Employees from "./components/Employees/Employees";
+import News from "./components/News/News";
+import Login from "./components/Login/Login";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/employees" component={Employees} />
           <Route path="/news" component={News} />
           <Route path="/about" component={About} />
+          <Route path="/login" component={Login} />
         </Switch>
       </div>
       <Footer />
