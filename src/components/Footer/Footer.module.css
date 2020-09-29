@@ -1,0 +1,29 @@
+.footer {
+  grid-area: f;
+  background-color: #111111;
+  box-sizing: border-box;
+  color: white;
+  width: 100%;
+  border-top: solid #535353a6 1.8px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+  color: white;
+  margin: 12px 0px 0px 10%;
+  font-size: 1em;
+  text-align: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.medias {
+  color: white;
+  margin: 12px 10% 0px 0px;
+  font-size: 1em;
+  text-align: right;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

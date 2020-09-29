@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 80px 1fr;
+}
+
+.title {
+  color: black;
+  margin-top: 1%;
+  font-size: 2em;
+  text-align: left;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.info {
+  height: 15em;
+  width: 45em;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+img {
+  float: left;
+  height: 100%;
+  width: 15em;
+}
+
+.infoText {
+  float: right;
+  padding: 10% 11%;
+  font-size: 2em;
+}
