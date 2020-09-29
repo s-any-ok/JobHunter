@@ -42,10 +42,17 @@
 
 .login {
   color: white;
-  margin: 20px 5% 0px 5%;
+  margin: 10px 5% 0px 5%;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 0.8em;
   text-align: right;
   cursor: pointer;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.loginText {
+  background-color: black;
+  border: black;
+  font-size: 0.9rem;
+  color: white;
 }

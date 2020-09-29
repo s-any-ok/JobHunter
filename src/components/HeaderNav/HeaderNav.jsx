@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import s from "./HeaderNav.module.css";
 import { NavLink } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import Login from "../Login/Login";
 
 const HeaderNav = () => {
+  const [modalShow, setModalShow] = useState(false);
   return (
     <div className={s.header}>
       <div className={s.container}>
@@ -28,10 +31,16 @@ const HeaderNav = () => {
             </NavLink>
           </div>
         </div>
-        <div>
-          <NavLink to="/login">
-            <div className={s.login}>Login</div>
-          </NavLink>
+        <div className={s.login}>
+          <Button
+            className={s.loginText}
+            variant="light"
+            onClick={() => setModalShow(true)}
+          >
+            Login
+          </Button>
+
+          <Login show={modalShow} onHide={() => setModalShow(false)} />
         </div>
       </div>
     </div>
