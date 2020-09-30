@@ -51,7 +51,7 @@ class Login extends Component {
                     </Button>
                   </Form.Group>
                   <Form.Group>
-                    <Button variant="dark" href="#" block>
+                    <Button variant="dark" href="/register" block>
                       Register
                     </Button>
                   </Form.Group>
