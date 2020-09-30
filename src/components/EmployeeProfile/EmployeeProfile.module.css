@@ -1,0 +1,70 @@
+.empForm {
+  width: 70%;
+  height: 80%;
+  margin-top: 2%;
+  margin-left: 15%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+.title {
+  color: black;
+  margin-top: 1%;
+  font-size: 1.6em;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "photo about"
+    "photo about"
+    "photo about";
+}
+
+.proImg {
+  grid-area: photo;
+}
+.proInfo {
+  grid-area: about;
+  margin: 4%;
+  width: 50%;
+}
+
+.proImg img {
+  width: 50%;
+  margin: 10%;
+  border-radius: 5%;
+}
+
+.fullName {
+  color: black;
+  margin-top: 1%;
+  font-size: 1.4em;
+}
+
+.profession {
+  color: #0062cc;
+  font-size: 1em;
+}
+
+.about {
+  display: grid;
+  margin-top: 10%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.var {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.val {
+  padding-left: 70%;
+  color: #0062cc;
+  font-size: 1.1em;
+  font-weight: 600;
+}

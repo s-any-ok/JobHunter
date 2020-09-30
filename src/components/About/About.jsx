@@ -7,7 +7,7 @@ const About = () => {
       <div className={s.title}>About</div>
       <div className={s.info}>
         <div>
-          <img src={myPhoto} />
+          <img src={myPhoto} alt="Oleksandr Levak" />
         </div>
         <div className={s.infoText}>Oleksandr Levak, IT-91</div>
       </div>
