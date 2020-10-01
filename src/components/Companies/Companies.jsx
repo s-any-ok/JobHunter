@@ -1,9 +1,17 @@
 import React from "react";
 
-const Companies = () => {
+const Companies = ({ companies }) => {
   return (
     <div>
-      <div>Companies</div>
+      {companies.map((c) => {
+        return (
+          <div>
+            <div>Name: {c.CompanyName}</div>
+            <div>Information: {c.Information}</div>
+            <div>ContactNumber: {c.ContactNumber}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };

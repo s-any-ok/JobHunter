@@ -4,14 +4,14 @@ import { Route, Switch } from "react-router-dom";
 import HeaderNav from "./components/HeaderNav/HeaderNav";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
-import Vacancies from "./components/Vacancies/Vacancies";
+import VacanciesFunc from "./components/Vacancies/VacanciesFunc";
 import Companies from "./components/Companies/Companies";
 import Employees from "./components/Employees/Employees";
 import News from "./components/News/News";
 import Register from "./components/Register/Register";
 import EmployeeProfile from "./components/EmployeeProfile/EmployeeProfile";
 
-const App = () => {
+const App = (props) => {
   return (
     <div className="wrapper">
       <HeaderNav />
@@ -20,8 +20,14 @@ const App = () => {
         <Switch>
           <Route path="/" render={() => <About />} exact />
           <Route path="/about" render={() => <About />} />
-          <Route path="/companies" render={() => <Companies />} />
-          <Route path="/vacancies" render={() => <Vacancies />} />
+          <Route
+            path="/companies"
+            render={() => <Companies companies={props.state.companies} />}
+          />
+          <Route
+            path="/vacancies"
+            render={() => <VacanciesFunc vacancies={props.state.vacancies} />}
+          />
           <Route path="/employees" render={() => <Employees />} />
           <Route path="/news" render={() => <News />} />
           <Route path="/register" render={() => <Register />} />
