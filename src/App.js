@@ -15,19 +15,19 @@ const App = () => {
   return (
     <div className="wrapper">
       <HeaderNav />
+      <Footer />
       <div className="wrapper-content">
         <Switch>
-          <Route path="/" component={About} exact />
-          <Route path="/companies" component={Companies} />
-          <Route path="/vacancies" component={Vacancies} />
-          <Route path="/employees" component={Employees} />
-          <Route path="/news" component={News} />
-          <Route path="/about" component={About} />
-          <Route path="/register" component={Register} />
-          <Route path="/profile" component={EmployeeProfile} />
+          <Route path="/" render={() => <About />} exact />
+          <Route path="/about" render={() => <About />} />
+          <Route path="/companies" render={() => <Companies />} />
+          <Route path="/vacancies" render={() => <Vacancies />} />
+          <Route path="/employees" render={() => <Employees />} />
+          <Route path="/news" render={() => <News />} />
+          <Route path="/register" render={() => <Register />} />
+          <Route path="/profile" render={() => <EmployeeProfile />} />
         </Switch>
       </div>
-      <Footer />
     </div>
   );
 };
