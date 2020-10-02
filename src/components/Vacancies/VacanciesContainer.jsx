@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import VacanciesFunc from "./VacanciesFunc";
-// import * as axios from 'axios';
+import { setVacancies } from "../../redux/vacanciesReducer";
+import Vacancies from "./Vacancies";
 
 const mapStateToProps = (state) => {
   return {
@@ -9,11 +9,15 @@ const mapStateToProps = (state) => {
   };
 };
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    setVacancies: (vacancies) => {
+      dispatch(setVacancies(vacancies));
+    },
+  };
 };
 const VacanciesContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(VacanciesFunc);
+)(Vacancies);
 
 export default VacanciesContainer;

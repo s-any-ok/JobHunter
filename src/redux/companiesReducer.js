@@ -1,4 +1,4 @@
-const SHOW_COMPANIES = "comoanies/SHOW-COMPANIES";
+const SET_COMPANIES = "comoanies/SET-COMPANIES";
 
 let initState = {
   companies: [
@@ -18,16 +18,16 @@ let initState = {
 };
 const companiesReducer = (state = initState, action) => {
   switch (action.type) {
-    case SHOW_COMPANIES:
-      return state;
+    case SET_COMPANIES:
+      return { ...state, companies: [...state.companies, ...action.companies] };
     default:
       return state;
   }
 };
 
 //--------Actions--------//
-export const showCompanies = (companies) => ({
-  type: SHOW_COMPANIES,
+export const setCompanies = (companies) => ({
+  type: SET_COMPANIES,
   companies: companies,
 });
 

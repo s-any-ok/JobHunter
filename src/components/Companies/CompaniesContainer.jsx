@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { setCompanies } from "../../redux/companiesReducer";
 import Companies from "./Companies";
 
 const mapStateToProps = (state) => {
@@ -8,7 +9,11 @@ const mapStateToProps = (state) => {
   };
 };
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    setCompanies: (companies) => {
+      dispatch(setCompanies(companies));
+    },
+  };
 };
 const CompaniesContainer = connect(
   mapStateToProps,
