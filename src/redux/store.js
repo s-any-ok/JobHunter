@@ -1,4 +1,4 @@
-let state = {
+let store = {
   vacancies: [
     {
       VacancyID: 1,
@@ -33,4 +33,4 @@ let state = {
   ],
 };
 
-export default state;
+export default store;

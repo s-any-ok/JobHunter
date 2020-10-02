@@ -4,12 +4,12 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
-import state from "./redux/store";
+import store from "./redux/reduxStore";
 
 ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
-      <App state={state} />
+      <App store={store.getState()} />
     </React.StrictMode>
   </BrowserRouter>,
   document.getElementById("root")

@@ -22,11 +22,15 @@ const App = (props) => {
           <Route path="/about" render={() => <About />} />
           <Route
             path="/companies"
-            render={() => <Companies companies={props.state.companies} />}
+            render={() => (
+              <Companies companies={props.store.comoaniesPage.companies} />
+            )}
           />
           <Route
             path="/vacancies"
-            render={() => <VacanciesFunc vacancies={props.state.vacancies} />}
+            render={() => (
+              <VacanciesFunc vacancies={props.store.vacanciesPage.vacancies} />
+            )}
           />
           <Route path="/employees" render={() => <Employees />} />
           <Route path="/news" render={() => <News />} />
