@@ -21,11 +21,7 @@ const mapStateToProps = (state) => {
     vacancies: state.vacanciesPage.vacancies,
   };
 };
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setVacancies: (vacancies) => {
-      dispatch(setVacancies(vacancies));
-    },
-  };
+const mapDispatchToProps = {
+  setVacancies,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(VacanciesContainer);
