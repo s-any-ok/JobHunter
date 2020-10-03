@@ -4,12 +4,13 @@ import { Route, Switch } from "react-router-dom";
 import HeaderNav from "./components/HeaderNav/HeaderNav";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
-import Employees from "./components/Employees/Employees";
 import News from "./components/News/News";
-import Register from "./components/Register/Register";
 import EmployeeProfile from "./components/EmployeeProfile/EmployeeProfile";
 import VacanciesContainer from "./components/Vacancies/VacanciesContainer";
 import CompaniesContainer from "./components/Companies/CompaniesContainer";
+import CompanyRegister from "./components/CompanyRegister/CompanyRegister";
+import EmployeeRegister from "./components/EmployeeRegister/EmployeeRegister";
+import EmployeesContainer from "./components/Employees/EmployeesContainer";
 
 const App = (props) => {
   return (
@@ -22,9 +23,10 @@ const App = (props) => {
           <Route path="/about" render={() => <About />} />
           <Route path="/companies" render={() => <CompaniesContainer />} />
           <Route path="/vacancies" render={() => <VacanciesContainer />} />
-          <Route path="/employees" render={() => <Employees />} />
+          <Route path="/employees" render={() => <EmployeesContainer />} />
           <Route path="/news" render={() => <News />} />
-          <Route path="/register" render={() => <Register />} />
+          <Route path="/compRegister" render={() => <CompanyRegister />} />
+          <Route path="/empRegister" render={() => <EmployeeRegister />} />
           <Route path="/profile" render={() => <EmployeeProfile />} />
         </Switch>
       </div>

@@ -1,0 +1,53 @@
+.container {
+  float: left;
+  margin: 1.5%;
+}
+
+.vacancyInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 9em;
+  width: 23em;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+
+.vacancyImg {
+  float: left;
+  height: 90%;
+  width: 80%;
+}
+
+.vacancyTitile {
+  padding-left: 20%;
+  padding-top: 2%;
+  margin: 1%;
+  font-size: 1.1em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.company {
+  padding-left: 30%;
+  font-size: 0.7em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.vacancyInfoText {
+  margin: 1%;
+}
+
+.vacancyDescription {
+  float: left;
+  padding-top: 2%;
+  padding-right: 5%;
+  font-size: 0.9em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.salary {
+  float: right;
+  font-size: 0.8em;
+  padding: 4% 8%;
+  font-family: Arial, Helvetica, sans-serif;
+}

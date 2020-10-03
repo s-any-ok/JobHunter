@@ -1,9 +1,9 @@
 import React from "react";
-import s from "./Register.module.css";
+import s from "./CompanyRegister.module.css";
 import { Button, Col, Form, InputGroup } from "react-bootstrap";
 // import * as axios from 'axios';
 
-const Register = () => {
+const CompanyRegister = () => {
   return (
     <div>
       <div className={s.title}>Register</div>
@@ -87,4 +87,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default CompanyRegister;

@@ -50,10 +50,28 @@ class Login extends Component {
                       Login
                     </Button>
                   </Form.Group>
+
                   <Form.Group>
-                    <Button variant="dark" href="/register" block>
-                      Register
-                    </Button>
+                    <Row>
+                      <Col className={s.regText} md={{ span: 6, offset: 3 }}>
+                        Register as
+                      </Col>
+                    </Row>
+                  </Form.Group>
+                  <Form.Group>
+                    <Row>
+                      <Col>
+                        <Button variant="dark" href="compRegister" block>
+                          Company
+                        </Button>
+                      </Col>
+
+                      <Col>
+                        <Button variant="secondary" href="empRegister" block>
+                          Employee
+                        </Button>
+                      </Col>
+                    </Row>
                   </Form.Group>
                 </Form>
               </Col>

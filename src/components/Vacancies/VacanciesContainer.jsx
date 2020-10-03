@@ -6,9 +6,11 @@ import * as axios from "axios";
 
 class VacanciesContainer extends React.Component {
   componentDidMount() {
-    axios.get("https://localhost:44374/api/vacancy").then((response) => {
-      this.props.setVacancies(response.data);
-    });
+    if (this.props.vacancies.length === 0) {
+      axios.get("https://localhost:44374/api/vacancy").then((response) => {
+        this.props.setVacancies(response.data);
+      });
+    }
   }
 
   render() {
