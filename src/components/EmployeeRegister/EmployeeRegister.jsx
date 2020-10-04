@@ -1,33 +1,21 @@
 import React from "react";
 import s from "./EmployeeRegister.module.css";
 import { Button, Col, Form, InputGroup } from "react-bootstrap";
-// import * as axios from 'axios';
+import * as axios from "axios";
 
 class EmployeeRegister extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
-    fetch("https://localhost:44374/api/User", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        UserLogin: e.target.Login.value,
-        UserPassword: e.target.Password.value,
-        isCompany: false,
-        ChildID: "00000000-0000-0000-0000-000000000001",
-      }),
+    axios.post("https://localhost:44374/api/User", {
+      UserLogin: e.target.Login.value,
+      UserPassword: e.target.Password.value,
+      isCompany: false,
+      ChildID: "12000000-0000-0000-0000-000000000000",
     });
 
-    fetch("https://localhost:44374/api/Employee", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        EmployeeID: "00000000-0000-0000-0000-000000000001",
+    axios
+      .post("https://localhost:44374/api/Employee", {
+        EmployeeID: "12000000-0000-0000-0000-000000000001",
         UserName: e.target.Username.value,
         Surname: e.target.Surname.value,
         FirstName: e.target.FirstName.value,
@@ -38,10 +26,9 @@ class EmployeeRegister extends React.Component {
         Mail: e.target.Email.value,
         ContactNumber: e.target.ContactNumber.value,
         SecretWord: e.target.SecretWord.value,
-      }),
-    })
-      .then((res) => res.json())
-      .then((r) => alert(r));
+      })
+      .then((response) => alert(response.data))
+      .catch((error) => alert(error.data));
   }
   render() {
     return (
