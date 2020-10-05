@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
-import HeaderNav from "./components/HeaderNav/HeaderNav";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import News from "./components/News/News";
@@ -15,7 +15,7 @@ import EmployeesContainer from "./components/Employees/EmployeesContainer";
 const App = (props) => {
   return (
     <div className="wrapper">
-      <HeaderNav />
+      <Header />
       <Footer />
       <div className="wrapper-content">
         <Switch>

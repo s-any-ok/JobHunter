@@ -2,33 +2,48 @@ import React from "react";
 import s from "./EmployeeRegister.module.css";
 import { Button, Col, Form, InputGroup } from "react-bootstrap";
 import * as axios from "axios";
+import { employeeAPI } from "../../api/api";
 
 class EmployeeRegister extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
-    axios.post("https://localhost:44374/api/User", {
-      UserLogin: e.target.Login.value,
-      UserPassword: e.target.Password.value,
-      isCompany: false,
-      ChildID: "12000000-0000-0000-0000-000000000000",
-    });
+    const {
+      Login,
+      Password,
+      Username,
+      Surname,
+      FirstName,
+      Patronymic,
+      Education,
+      Gender,
+      Birthday,
+      Email,
+      ContactNumber,
+      SecretWord,
+    } = e.target;
+    employeeAPI.setUser(
+      Login.value,
+      Password.value,
+      false,
+      "12000000-0000-0000-0000-000000000000"
+    );
 
-    axios
-      .post("https://localhost:44374/api/Employee", {
-        EmployeeID: "12000000-0000-0000-0000-000000000001",
-        UserName: e.target.Username.value,
-        Surname: e.target.Surname.value,
-        FirstName: e.target.FirstName.value,
-        Patronymic: e.target.Patronymic.value,
-        Education: e.target.Education.value,
-        Gender: e.target.Gender.value,
-        Birthday: e.target.Birthday.value,
-        Mail: e.target.Email.value,
-        ContactNumber: e.target.ContactNumber.value,
-        SecretWord: e.target.SecretWord.value,
-      })
-      .then((response) => alert(response.data))
-      .catch((error) => alert(error.data));
+    employeeAPI
+      .setEmployee(
+        "12000000-0000-0000-0000-000000000001",
+        Username.value,
+        Surname.value,
+        FirstName.value,
+        Patronymic.value,
+        Education.value,
+        Gender.value,
+        Birthday.value,
+        Email.value,
+        ContactNumber.value,
+        SecretWord.value
+      )
+      .then((response) => alert(response))
+      .catch((error) => alert(error));
   }
   render() {
     return (

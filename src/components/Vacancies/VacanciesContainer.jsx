@@ -1,15 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import { vacancyAPI } from "../../api/api";
 import { setVacancies } from "../../redux/vacanciesReducer";
 import Vacancies from "./Vacancies";
-import * as axios from "axios";
-
 class VacanciesContainer extends React.Component {
   componentDidMount() {
     if (this.props.vacancies.length === 0) {
-      axios.get("https://localhost:44374/api/vacancy").then((response) => {
-        this.props.setVacancies(response.data);
-      });
+      vacancyAPI.getVacancies().then((data) => this.props.setVacancies(data));
     }
   }
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import s from "./HeaderNav.module.css";
+import s from "./Header.module.css";
 import { Button } from "react-bootstrap";
 import Login from "../Login/Login";
 import NavBar from "./Nav/NavBar";
