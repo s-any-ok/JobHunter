@@ -1,13 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { vacancyAPI } from "../../api/api";
-import { setVacancies } from "../../redux/vacanciesReducer";
+import { getVacancies } from "../../redux/vacanciesReducer";
 import Vacancies from "./Vacancies";
 class VacanciesContainer extends React.Component {
   componentDidMount() {
-    if (this.props.vacancies.length === 0) {
-      vacancyAPI.getVacancies().then((data) => this.props.setVacancies(data));
-    }
+    this.props.getVacancies(this.props.vacancies);
   }
 
   render() {
@@ -21,6 +19,6 @@ const mapStateToProps = (state) => {
   };
 };
 const mapDispatchToProps = {
-  setVacancies,
+  getVacancies,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(VacanciesContainer);

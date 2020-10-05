@@ -1,3 +1,5 @@
+import { vacancyAPI } from "../api/api";
+
 const SET_VACANCIES = "vacancies/SET-VACANCIES";
 
 let initState = {
@@ -34,5 +36,11 @@ export const setVacancies = (vacancies) => ({
   type: SET_VACANCIES,
   vacancies: vacancies,
 });
+//--------Thunks--------//
+export const getVacancies = (vacancies) => (dispath) => {
+  if (vacancies.length === 0) {
+    vacancyAPI.getVacancies().then((data) => dispath(setVacancies(data)));
+  }
+};
 
 export default vacanciesReducer;

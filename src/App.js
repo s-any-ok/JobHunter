@@ -9,8 +9,8 @@ import EmployeeProfile from "./components/EmployeeProfile/EmployeeProfile";
 import VacanciesContainer from "./components/Vacancies/VacanciesContainer";
 import CompaniesContainer from "./components/Companies/CompaniesContainer";
 import CompanyRegister from "./components/CompanyRegister/CompanyRegister";
-import EmployeeRegister from "./components/EmployeeRegister/EmployeeRegister";
 import EmployeesContainer from "./components/Employees/EmployeesContainer";
+import EmployeeRegisterContainer from "./components/EmployeeRegister/EmployeeRegisterContainer";
 
 const App = (props) => {
   return (
@@ -26,7 +26,10 @@ const App = (props) => {
           <Route path="/employees" render={() => <EmployeesContainer />} />
           <Route path="/news" render={() => <News />} />
           <Route path="/compRegister" render={() => <CompanyRegister />} />
-          <Route path="/empRegister" render={() => <EmployeeRegister />} />
+          <Route
+            path="/empRegister"
+            render={() => <EmployeeRegisterContainer />}
+          />
           <Route path="/profile" render={() => <EmployeeProfile />} />
         </Switch>
       </div>
