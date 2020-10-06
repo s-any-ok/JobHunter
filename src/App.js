@@ -5,12 +5,12 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import News from "./components/News/News";
-import EmployeeProfile from "./components/EmployeeProfile/EmployeeProfile";
 import VacanciesContainer from "./components/Vacancies/VacanciesContainer";
 import CompaniesContainer from "./components/Companies/CompaniesContainer";
 import CompanyRegister from "./components/CompanyRegister/CompanyRegister";
 import EmployeesContainer from "./components/Employees/EmployeesContainer";
 import EmployeeRegisterContainer from "./components/EmployeeRegister/EmployeeRegisterContainer";
+import EmployeeProfileContainer from "./components/EmployeeProfile/EmployeeProfileContainer";
 
 const App = (props) => {
   return (
@@ -30,7 +30,7 @@ const App = (props) => {
             path="/empRegister"
             render={() => <EmployeeRegisterContainer />}
           />
-          <Route path="/profile" render={() => <EmployeeProfile />} />
+          <Route path="/profile" render={() => <EmployeeProfileContainer />} />
         </Switch>
       </div>
     </div>

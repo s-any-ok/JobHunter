@@ -58,3 +58,9 @@ export const vacancyAPI = {
     return instance.get("api/Vacancy").then((response) => response.data);
   },
 };
+
+export const profileAPI = {
+  getEmpProfile() {
+    return instance.get("api/profile").then((response) => response.data);
+  },
+};

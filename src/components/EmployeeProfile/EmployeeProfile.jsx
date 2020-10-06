@@ -3,7 +3,7 @@ import s from "./EmployeeProfile.module.css";
 import myPhoto from "../../assets/img/I.jpg";
 // import * as axios from 'axios';
 
-const EmployeeProfile = () => {
+const EmployeeProfile = ({ empProfile }) => {
   return (
     <div className={s.empForm}>
       <div className={s.title}>Profile</div>
@@ -12,16 +12,20 @@ const EmployeeProfile = () => {
           <img src={myPhoto} alt="profilePhoto" />
         </div>
         <div className={s.proInfo}>
-          <div className={s.fullName}>Oleksandr Levak</div>
+          <div className={s.fullName}>
+            {empProfile.FirstName} {empProfile.Surname}
+          </div>
           <div className={s.profession}>Web-developer</div>
           <div className={s.about}>
             <div className={s.var}>
               <div>Username</div>
               <div>Email</div>
+              <div>Contact</div>
             </div>
             <div className={s.val}>
-              <div>Alex</div>
-              <div>alex@mail.com</div>
+              <div>{empProfile.Username}</div>
+              <div>{empProfile.Mail}</div>
+              <div>{empProfile.ContactNumber}</div>
             </div>
           </div>
         </div>
