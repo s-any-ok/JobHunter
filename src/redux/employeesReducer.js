@@ -1,4 +1,5 @@
 import { employeeAPI } from "../api/api";
+import { getObjOfData } from "../components/helpers/helpers";
 
 const SET_EMPLOYEES = "employees/SET-EMPLOYEES";
 const TOGGLE_IS_FETCHING = "employees/TOGGLE-IS-FETCHING";
@@ -36,23 +37,24 @@ export const getEmployees = (employees) => (dispath) => {
   dispath(toggleIsFetching(false));
 };
 export const setEmployeeUsers = (target) => {
-  const {
-    Login,
-    Password,
-    Username,
-    Surname,
-    FirstName,
-    Patronymic,
-    Education,
-    Gender,
-    Birthday,
-    Email,
-    ContactNumber,
-    SecretWord,
-  } = target;
+  const formValue = [
+    "Login",
+    "Password",
+    "Username",
+    "Surname",
+    "FirstName",
+    "Patronymic",
+    "Education",
+    "Gender",
+    "Birthday",
+    "Email",
+    "ContactNumber",
+    "SecretWord",
+  ];
+  let userData = getObjOfData(formValue, target);
   employeeAPI.setUser(
-    Login.value,
-    Password.value,
+    userData.Login,
+    userData.Password,
     false,
     "12000000-0000-0000-0000-000000000000"
   );
@@ -60,16 +62,16 @@ export const setEmployeeUsers = (target) => {
   employeeAPI
     .setEmployee(
       "12000000-0000-0000-0000-000000000001",
-      Username.value,
-      Surname.value,
-      FirstName.value,
-      Patronymic.value,
-      Education.value,
-      Gender.value,
-      Birthday.value,
-      Email.value,
-      ContactNumber.value,
-      SecretWord.value
+      userData.Username,
+      userData.Surname,
+      userData.FirstName,
+      userData.Patronymic,
+      userData.Education,
+      userData.Gender,
+      userData.Birthday,
+      userData.Email,
+      userData.ContactNumber,
+      userData.SecretWord
     )
     .then((response) => alert(response))
     .catch((error) => alert(error));

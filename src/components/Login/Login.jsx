@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import s from "./Login.module.css";
 import { Modal, Button, Row, Col, Form } from "react-bootstrap";
+import { getObjOfData } from "../helpers/helpers";
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   handleSubmit(e) {
     e.preventDefault();
-    alert(e.target.Password.value);
+    const formValues = ["Login", "Password"];
+    let res = getObjOfData(formValues, e.target);
+    alert(res);
   }
   render() {
     return (
