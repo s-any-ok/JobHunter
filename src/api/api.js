@@ -23,26 +23,26 @@ export const employeeAPI = {
   ) {
     return instance
       .post("api/Employee", {
-        EmployeeID: employeeID,
-        UserName: username,
-        Surname: surname,
-        FirstName: firstname,
-        Patronymic: patronymic,
-        Education: education,
-        Gender: gender,
-        Birthday: birthday,
-        Mail: email,
-        ContactNumber: contactNumber,
-        SecretWord: secretWord,
+        employeeID,
+        username,
+        surname,
+        firstname,
+        patronymic,
+        education,
+        gender,
+        birthday,
+        email,
+        contactNumber,
+        secretWord,
       })
       .then((response) => response.data);
   },
   setUser(login, password, isCompany, ChildID) {
     return instance.post("api/User", {
-      UserLogin: login,
-      UserPassword: password,
-      isCompany: isCompany,
-      ChildID: ChildID,
+      login,
+      password,
+      isCompany,
+      ChildID,
     });
   },
 };

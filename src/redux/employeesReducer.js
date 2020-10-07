@@ -56,9 +56,8 @@ export const setEmployeeUsers = (target) => {
     userData.Login,
     userData.Password,
     false,
-    "12000000-0000-0000-0000-000000000000"
+    "12000000-0000-0000-0000-000000000001"
   );
-
   employeeAPI
     .setEmployee(
       "12000000-0000-0000-0000-000000000001",
@@ -75,5 +74,6 @@ export const setEmployeeUsers = (target) => {
     )
     .then((response) => alert(response))
     .catch((error) => alert(error));
+  //dispath(setEmployees(userData));
 };
 export default employeesReducer;
