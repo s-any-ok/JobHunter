@@ -37,7 +37,7 @@ export const getEmployees = (employees) => (dispath) => {
   dispath(toggleIsFetching(false));
 };
 export const setEmployeeUsers = (target) => {
-  const formValue = [
+  const formValues = [
     "Login",
     "Password",
     "Username",
@@ -51,7 +51,7 @@ export const setEmployeeUsers = (target) => {
     "ContactNumber",
     "SecretWord",
   ];
-  let userData = getObjOfData(formValue, target);
+  let userData = getObjOfData(formValues, target);
   employeeAPI.setUser(
     userData.Login,
     userData.Password,
