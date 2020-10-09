@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { getIsFetching, getEmployees } from "../../redux/employeesSelectors";
 import Employees from "./Employees";
 
 class EmployeesContainer extends React.Component {
@@ -15,8 +16,8 @@ class EmployeesContainer extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    employees: state.employeesPage.employees,
-    isFetching: state.employeesPage.isFetching,
+    employees: getEmployees(state),
+    isFetching: getIsFetching(state),
   };
 };
 

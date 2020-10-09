@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
@@ -13,6 +13,7 @@ import EmployeeProfileContainer from "./components/EmployeeProfile/EmployeeProfi
 import { connect } from "react-redux";
 import { getEmployees } from "./redux/employeesReducer";
 import { getVacancies } from "./redux/vacanciesReducer";
+import { compose } from "redux";
 
 class App extends React.Component {
   componentDidMount() {
@@ -52,4 +53,4 @@ const mapDispatchToProps = {
   getVacancies,
 };
 
-export default connect(null, mapDispatchToProps)(App);
+export default compose(withRouter, connect(null, mapDispatchToProps))(App);
