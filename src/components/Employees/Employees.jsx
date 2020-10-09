@@ -5,13 +5,15 @@ import s from "./Employees.module.css";
 
 const Employees = ({ employees, isFetching }) => {
   return (
-    <div>
+    <>
       <div className={s.title}>Employees</div>
       {isFetching ? <Preloader /> : null}
-      {employees.map((e) => (
-        <Employee employee={e} />
-      ))}
-    </div>
+      <div>
+        {employees.map((e) => (
+          <Employee employee={e} />
+        ))}
+      </div>
+    </>
   );
 };
 

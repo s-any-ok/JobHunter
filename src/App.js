@@ -10,8 +10,15 @@ import CompanyRegister from "./components/CompanyRegister/CompanyRegister";
 import EmployeesContainer from "./components/Employees/EmployeesContainer";
 import EmployeeRegisterContainer from "./components/EmployeeRegister/EmployeeRegisterContainer";
 import EmployeeProfileContainer from "./components/EmployeeProfile/EmployeeProfileContainer";
+import { connect } from "react-redux";
+import { getEmployees } from "./redux/employeesReducer";
+import { getVacancies } from "./redux/vacanciesReducer";
 
 class App extends React.Component {
+  componentDidMount() {
+    this.props.getVacancies();
+    this.props.getEmployees();
+  }
   render() {
     return (
       <div className="wrapper">
@@ -19,7 +26,7 @@ class App extends React.Component {
         <Footer />
         <div className="wrapper-content">
           <Switch>
-            <Route path="/" render={() => <About />} exact />
+            <Route path="/" render={() => <EmployeesContainer />} exact />
             <Route path="/about" render={() => <About />} />
             <Route path="/companies" render={() => <CompaniesContainer />} />
             <Route path="/vacancies" render={() => <VacanciesContainer />} />
@@ -40,4 +47,9 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = {
+  getEmployees,
+  getVacancies,
+};
+
+export default connect(null, mapDispatchToProps)(App);

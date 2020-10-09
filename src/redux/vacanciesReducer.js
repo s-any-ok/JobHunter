@@ -37,10 +37,8 @@ export const setVacancies = (vacancies) => ({
   vacancies: vacancies,
 });
 //--------Thunks--------//
-export const getVacancies = (vacancies) => (dispath) => {
-  if (vacancies.length === 0) {
-    vacancyAPI.getVacancies().then((data) => dispath(setVacancies(data)));
-  }
+export const getVacancies = () => (dispath) => {
+  vacancyAPI.getVacancies().then((data) => dispath(setVacancies(data)));
 };
 
 export default vacanciesReducer;

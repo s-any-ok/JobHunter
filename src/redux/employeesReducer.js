@@ -29,14 +29,12 @@ export const toggleIsFetching = (isFetching) => ({
   isFetching,
 });
 //--------Thunks--------//
-export const getEmployees = (employees) => (dispath) => {
+export const getEmployees = () => (dispath) => {
   dispath(toggleIsFetching(true));
-  if (employees.length === 0) {
-    employeeAPI.getEmployees().then((data) => dispath(setEmployees(data)));
-  }
+  employeeAPI.getEmployees().then((data) => dispath(setEmployees(data)));
   dispath(toggleIsFetching(false));
 };
-export const setEmployeeUsers = (target) => {
+export const setEmployeeUsers = (target) => (dispath) => {
   const formValues = [
     "Login",
     "Password",
@@ -73,7 +71,7 @@ export const setEmployeeUsers = (target) => {
       userData.SecretWord
     )
     .then((response) => alert(response))
-    .catch((error) => alert(error));
-  //dispath(setEmployees(userData));
+    .catch((error) => alert(error))
+    .then(() => dispath(setEmployees([userData])));
 };
 export default employeesReducer;

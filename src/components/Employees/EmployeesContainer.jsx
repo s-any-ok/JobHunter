@@ -1,13 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getEmployees } from "../../redux/employeesReducer";
 import Employees from "./Employees";
 
 class EmployeesContainer extends React.Component {
-  componentDidMount() {
-    this.props.getEmployees(this.props.employees);
-  }
-
   render() {
     return (
       <Employees
@@ -24,8 +19,5 @@ const mapStateToProps = (state) => {
     isFetching: state.employeesPage.isFetching,
   };
 };
-const mapDispatchToProps = {
-  getEmployees,
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(EmployeesContainer);
+export default connect(mapStateToProps, null)(EmployeesContainer);
