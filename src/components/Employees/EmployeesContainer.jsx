@@ -5,6 +5,7 @@ import Employees from "./Employees";
 
 class EmployeesContainer extends React.Component {
   render() {
+    console.log('emp');
     return (
       <Employees
         employees={this.props.employees}
