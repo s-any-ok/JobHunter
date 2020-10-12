@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./EmployeeProfile.module.css";
 import myPhoto from "../../assets/img/I.jpg";
-// import * as axios from 'axios';
+
 
 const EmployeeProfile = ({ empProfile }) => {
   return (

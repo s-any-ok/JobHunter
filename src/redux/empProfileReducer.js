@@ -25,8 +25,9 @@ export const setEmpProfile = (vacancies) => ({
   vacancies: vacancies,
 });
 //--------Thunks--------//
-export const getEmpProfile = () => (dispath) => {
-  profileAPI.profileAPI().then((data) => dispath(setEmpProfile(data)));
+export const getEmpProfile = () => async (dispath) => {
+  let data = await profileAPI.profileAPI();
+  dispath(setEmpProfile(data));
 };
 
 export default empProfileReducer;

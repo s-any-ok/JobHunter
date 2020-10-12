@@ -37,8 +37,9 @@ export const setVacancies = (vacancies) => ({
   vacancies: vacancies,
 });
 //--------Thunks--------//
-export const getVacancies = () => (dispath) => {
-  vacancyAPI.getVacancies().then((data) => dispath(setVacancies(data)));
+export const getVacancies = () => async (dispath) => {
+  let data = await vacancyAPI.getVacancies();
+  dispath(setVacancies(data));
 };
 
 export default vacanciesReducer;

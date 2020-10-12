@@ -1,8 +1,7 @@
-import React from "react";
 import companiesReducer, {
   deleteCompanyById,
   setCompanies,
-} from "./companiesReducer";
+} from "../companiesReducer";
 
 const state = {
   companies: [

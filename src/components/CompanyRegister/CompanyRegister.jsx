@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./CompanyRegister.module.css";
 import { Button, Col, Form, InputGroup } from "react-bootstrap";
-// import * as axios from 'axios';
+
 
 const CompanyRegister = () => {
   return (

@@ -29,12 +29,13 @@ export const toggleIsFetching = (isFetching) => ({
   isFetching,
 });
 //--------Thunks--------//
-export const getEmployees = () => (dispath) => {
+export const getEmployees = () => async (dispath) => {
   dispath(toggleIsFetching(true));
-  employeeAPI.getEmployees().then((data) => dispath(setEmployees(data)));
+  let data = await employeeAPI.getEmployees();
+  dispath(setEmployees(data));
   dispath(toggleIsFetching(false));
 };
-export const setEmployeeUsers = (target) => (dispath) => {
+export const setEmployeeUsers = (target) => async (dispath) => {
   const formValues = [
     "Login",
     "Password",
@@ -56,22 +57,20 @@ export const setEmployeeUsers = (target) => (dispath) => {
     false,
     "12000000-0000-0000-0000-000000000001"
   );
-  employeeAPI
-    .setEmployee(
-      "12000000-0000-0000-0000-000000000001",
-      userData.Username,
-      userData.Surname,
-      userData.FirstName,
-      userData.Patronymic,
-      userData.Education,
-      userData.Gender,
-      userData.Birthday,
-      userData.Email,
-      userData.ContactNumber,
-      userData.SecretWord
-    )
-    .then((response) => alert(response))
-    .catch((error) => alert(error))
-    .then(() => dispath(setEmployees([userData])));
+  let response = await employeeAPI.setEmployee(
+    "12000000-0000-0000-0000-000000000001",
+    userData.Username,
+    userData.Surname,
+    userData.FirstName,
+    userData.Patronymic,
+    userData.Education,
+    userData.Gender,
+    userData.Birthday,
+    userData.Email,
+    userData.ContactNumber,
+    userData.SecretWord
+  );
+  alert(response);
+  dispath(setEmployees([userData]));
 };
 export default employeesReducer;
