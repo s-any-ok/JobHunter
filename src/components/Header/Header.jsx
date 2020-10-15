@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import Login from "../Login/Login";
 import NavBar from "./Nav/NavBar";
 
-const HeaderNav = () => {
+const Header = ({UserLogin, isAuth}) => {
   const [modalShow, setModalShow] = useState(false);
   return (
     <div className={s.header}>
@@ -16,13 +16,14 @@ const HeaderNav = () => {
           <NavBar />
         </div>
         <div className={s.login}>
-          <Button
+          {!isAuth && <Button
             className={s.loginText}
             variant="light"
             onClick={() => setModalShow(true)}
           >
             Login
-          </Button>
+          </Button>}
+          {isAuth && <div>{UserLogin}</div>}
 
           <Login show={modalShow} onHide={() => setModalShow(false)} />
         </div>
@@ -31,4 +32,4 @@ const HeaderNav = () => {
   );
 };
 
-export default HeaderNav;
+export default Header;

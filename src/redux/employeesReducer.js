@@ -1,5 +1,9 @@
 import { employeeAPI } from "../api/api";
-import { getObjOfData } from "../components/helpers/helpers";
+import {
+  createGuid,
+  getDataTime,
+  getObjOfData,
+} from "../components/helpers/helpers";
 
 const SET_EMPLOYEES = "employees/SET-EMPLOYEES";
 const TOGGLE_IS_FETCHING = "employees/TOGGLE-IS-FETCHING";
@@ -40,37 +44,50 @@ export const setEmployeeUsers = (target) => async (dispath) => {
     "Login",
     "Password",
     "Username",
-    "Surname",
+    "SecretWord",
+    "PhoneNumber",
+    "Email",
+    "LastName",
     "FirstName",
-    "Patronymic",
+    "MiddleName",
+    "Objective",
     "Education",
     "Gender",
     "Birthday",
-    "Email",
-    "ContactNumber",
-    "SecretWord",
+    "AdditionalEducation",
+    "Experience",
+    "Skills",
+    "Adress",
   ];
+  const Guid = createGuid();
+  const DataTime = getDataTime(); // check
   let userData = getObjOfData(formValues, target);
-  employeeAPI.setUser(
+  await employeeAPI.setUser(
+    Guid,
+    false,
     userData.Login,
     userData.Password,
-    false,
-    "12000000-0000-0000-0000-000000000001"
-  );
-  let response = await employeeAPI.setEmployee(
-    "12000000-0000-0000-0000-000000000001",
     userData.Username,
-    userData.Surname,
-    userData.FirstName,
-    userData.Patronymic,
-    userData.Education,
-    userData.Gender,
-    userData.Birthday,
     userData.Email,
-    userData.ContactNumber,
-    userData.SecretWord
+    userData.PhoneNumber,
+    userData.SecretWord,
+    DataTime
   );
-  alert(response);
+  let respEmp = await employeeAPI.setEmployee(
+    Guid,
+    userData.FirstName,
+    userData.MiddleName,
+    userData.LastName,
+    userData.Objective,
+    userData.Education,
+    userData.AdditionalEducation,
+    userData.Experience,
+    userData.Skills,
+    userData.Adress,
+    userData.Gender,
+    userData.Birthday
+  );
+  alert(respEmp);
   dispath(setEmployees([userData]));
 };
 export default employeesReducer;

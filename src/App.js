@@ -14,16 +14,19 @@ import { connect } from "react-redux";
 import { getEmployees } from "./redux/employeesReducer";
 import { getVacancies } from "./redux/vacanciesReducer";
 import { compose } from "redux";
+import { getAuthUser } from "./redux/authReducer";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 class App extends React.Component {
   componentDidMount() {
     this.props.getVacancies();
     this.props.getEmployees();
+    this.props.getAuthUser();
   }
   render() {
     return (
       <div className="wrapper">
-        <Header />
+        <HeaderContainer />
         <Footer />
         <div className="wrapper-content">
           <Switch>
@@ -51,6 +54,7 @@ class App extends React.Component {
 const mapDispatchToProps = {
   getEmployees,
   getVacancies,
+  getAuthUser,
 };
 
 export default compose(withRouter, connect(null, mapDispatchToProps))(App);

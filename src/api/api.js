@@ -10,40 +10,57 @@ export const employeeAPI = {
   },
   setEmployee(
     employeeID,
-    username,
-    surname,
-    firstname,
-    patronymic,
+    firstName,
+    middleName,
+    lastName,
+    objective,
     education,
+    additionalEducation,
+    experience,
+    skills,
+    adress,
     gender,
-    birthday,
-    email,
-    contactNumber,
-    secretWord
+    birthday
   ) {
     return instance
       .post("api/Employee", {
         employeeID,
-        username,
-        surname,
-        firstname,
-        patronymic,
+        firstName,
+        middleName,
+        lastName,
+        objective,
         education,
+        additionalEducation,
+        experience,
+        skills,
+        adress,
         gender,
         birthday,
-        email,
-        contactNumber,
-        secretWord,
       })
       .then((response) => response.data);
   },
-  setUser(login, password, isCompany, ChildID) {
-    return instance.post("api/User", {
-      login,
-      password,
-      isCompany,
-      ChildID,
-    });
+  setUser(
+    ChildID,
+    isCompany,
+    login,
+    password,
+    username,
+    email,
+    phoneNumber,
+    secretWord
+  ) {
+    return instance
+      .post("api/User", {
+        ChildID,
+        isCompany,
+        login,
+        password,
+        username,
+        email,
+        phoneNumber,
+        secretWord,
+      })
+      .then((response) => response.data);
   },
 };
 
@@ -62,5 +79,19 @@ export const vacancyAPI = {
 export const profileAPI = {
   getEmpProfile() {
     return instance.get("api/profile").then((response) => response.data);
+  },
+};
+
+export const authAPI = {
+  getUserData() {
+    return instance.get("api/user/auth").then((response) => response.data);
+  },
+  login(login, password) {
+    return instance
+      .post("api/user/login", {
+        login,
+        password,
+      })
+      .then((response) => response.data);
   },
 };

@@ -12,12 +12,12 @@ const Employee = (props) => {
           </div>
           <div className={s.vacancyInfoText}>
             <div className={s.fio}>
-              {props.employee.FirstName} {props.employee.Surname}
+              {props.employee.FirstName} {props.employee.LastName}
             </div>
             <div className={s.gender}>{props.employee.Gender}</div>
             <div className={s.education}>{props.employee.Education}</div>
-            <div className={s.contact}>{props.employee.Mail}</div>
-            <div className={s.contact}>{props.employee.ContactNumber}</div>
+            <div className={s.contact}>{props.employee.Objective}</div>
+            <div className={s.contact}>{props.employee.BirthDay}</div>
           </div>
         </div>
       </div>

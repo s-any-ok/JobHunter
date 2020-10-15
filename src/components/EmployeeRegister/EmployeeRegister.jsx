@@ -64,23 +64,39 @@ const EmployeeRegister = (props) => {
               <Form.Control placeholder="First Name" />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="Surname">
-              <Form.Label>Surname</Form.Label>
-              <Form.Control placeholder="Surname" />
+            <Form.Group as={Col} controlId="MiddleName">
+              <Form.Label>Middle Name</Form.Label>
+              <Form.Control placeholder="Middle Name" />
             </Form.Group>
 
-            <Form.Group as={Col} controlId="Patronymic">
-              <Form.Label>Patronymic</Form.Label>
-              <Form.Control placeholder="Patronymic" />
+            <Form.Group as={Col} controlId="LastName">
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control placeholder="Last Name" />
             </Form.Group>
           </Form.Row>
           <Form.Group controlId="Birthday">
             <Form.Label>Birthday</Form.Label>
             <Form.Control placeholder="dd-mm-yyyy" />
           </Form.Group>
+          <Form.Group controlId="Objective">
+            <Form.Label>Objective</Form.Label>
+            <Form.Control placeholder="Your objective" />
+          </Form.Group>
           <Form.Group controlId="Education">
             <Form.Label>Education</Form.Label>
             <Form.Control placeholder="Information about your education" />
+          </Form.Group>
+          <Form.Group controlId="AdditionalEducation">
+            <Form.Label>Additional Education</Form.Label>
+            <Form.Control placeholder="Your additional Education" />
+          </Form.Group>
+          <Form.Group controlId="Experience">
+            <Form.Label>Experience</Form.Label>
+            <Form.Control placeholder="Your work experience" />
+          </Form.Group>
+          <Form.Group controlId="Skills">
+            <Form.Label>Skills</Form.Label>
+            <Form.Control placeholder="Your skills" />
           </Form.Group>
           <Form.Group controlId="Gender">
             <Form.Label>Gender</Form.Label>
@@ -91,8 +107,12 @@ const EmployeeRegister = (props) => {
               <option>Custom</option>
             </Form.Control>
           </Form.Group>
-          <Form.Group controlId="ContactNumber">
-            <Form.Label>Contact Number</Form.Label>
+          <Form.Group controlId="Adress">
+            <Form.Label>Adress</Form.Label>
+            <Form.Control placeholder="Adress" />
+          </Form.Group>
+          <Form.Group controlId="PhoneNumber">
+            <Form.Label>Phone Number</Form.Label>
             <Form.Control placeholder="Phone number" />
           </Form.Group>
 

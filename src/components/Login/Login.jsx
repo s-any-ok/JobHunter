@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import s from "./Login.module.css";
 import { Modal, Button, Row, Col, Form } from "react-bootstrap";
-import { getObjOfData } from "../helpers/helpers";
+import { getLoginUser } from "../../redux/authReducer";
 
 class Login extends Component {
   handleSubmit(e) {
     e.preventDefault();
-    const formValues = ["Login", "Password"];
-    let res = getObjOfData(formValues, e.target);
-    alert(res);
+    getLoginUser(e.target);
   }
   render() {
     return (

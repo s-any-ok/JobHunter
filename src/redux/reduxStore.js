@@ -3,6 +3,7 @@ import companiesReducer from "./companiesReducer";
 import employeesReducer from "./employeesReducer";
 import vacanciesReducer from "./vacanciesReducer";
 import empProfileReducer from "./empProfileReducer";
+import authReducer from "./authReducer";
 import thunkMiddleware from "redux-thunk";
 
 let reducers = combineReducers({
@@ -10,6 +11,7 @@ let reducers = combineReducers({
   comoaniesPage: companiesReducer,
   employeesPage: employeesReducer,
   empProfilePage: empProfileReducer,
+  auth: authReducer,
 });
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));

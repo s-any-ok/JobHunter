@@ -1,5 +1,5 @@
-const SET_COMPANIES = "comoanies/SET-COMPANIES";
-const DELETE_COMPANY = "comoanies/DELETE-COMPANY";
+const SET_COMPANIES = "companies/SET-COMPANIES";
+const DELETE_COMPANY = "companies/DELETE-COMPANY";
 
 let initState = {
   companies: [

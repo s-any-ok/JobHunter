@@ -12,8 +12,8 @@ const Vacancy = (props) => {
             <img className={s.vacancyImg} src={myPhoto} />
           </div>
           <div className={s.vacancyInfoText}>
-            <div className={s.vacancyTitile}>{props.vacancy.VacancyName}</div>
-            <div className={s.company}>{props.vacancy.Company}</div>
+            <div className={s.vacancyTitile}>{props.vacancy.Objective}</div>
+            <div className={s.company}>{props.vacancy.Employment}</div>
             <div className={s.vacancyDescription}>
               {props.vacancy.Information}
             </div>
