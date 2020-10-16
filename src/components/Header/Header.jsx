@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import s from "./Header.module.css";
 import { Button } from "react-bootstrap";
-import Login from "../Login/Login";
 import NavBar from "./Nav/NavBar";
+import LoginContainer from "../Login/LoginContainer";
 
-const Header = ({UserLogin, isAuth}) => {
+
+const Header = ({UserLogin, isAuth, getLogoutUser}) => {
   const [modalShow, setModalShow] = useState(false);
+  const logoutAction = () => {
+    setModalShow(false)
+    getLogoutUser()
+  }
   return (
     <div className={s.header}>
       <div className={s.container}>
@@ -23,9 +28,9 @@ const Header = ({UserLogin, isAuth}) => {
           >
             Login
           </Button>}
-          {isAuth && <div>{UserLogin}</div>}
+          {isAuth && <div>{UserLogin} - <button onClick={logoutAction}>Logout</button></div>}
 
-          <Login show={modalShow} onHide={() => setModalShow(false)} />
+          <LoginContainer show={modalShow} onHide={() => setModalShow(false)} />
         </div>
       </div>
     </div>

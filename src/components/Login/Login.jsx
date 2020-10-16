@@ -1,17 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import s from "./Login.module.css";
 import { Modal, Button, Row, Col, Form } from "react-bootstrap";
-import { getLoginUser } from "../../redux/authReducer";
+import { Redirect } from "react-router-dom";
 
-class Login extends Component {
-  handleSubmit(e) {
-    e.preventDefault();
-    getLoginUser(e.target);
-  }
-  render() {
+const Login = (props) => {
+  if(props.isAuth) return <Redirect to='/profile'/>
     return (
       <Modal
-        {...this.props}
+        {...props}
         size="md"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -23,7 +19,7 @@ class Login extends Component {
           <div className="container">
             <Row>
               <Col sm={12}>
-                <Form onSubmit={this.handleSubmit}>
+                <Form onSubmit={props.handleSubmit}>
                   <Form.Group controlId="Login">
                     <Form.Label>Login</Form.Label>
                     <Form.Control
@@ -76,13 +72,12 @@ class Login extends Component {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={this.props.onHide}>
+          <Button variant="dark" type="submit" onClick={props.onHide}>
             Close
           </Button>
         </Modal.Footer>
       </Modal>
     );
-  }
 }
 
 export default Login;
