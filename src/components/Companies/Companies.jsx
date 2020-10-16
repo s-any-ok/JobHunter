@@ -1,21 +1,18 @@
 import React from "react";
-
-class Companies extends React.Component {
-  render() {
+import s from "./Companies.module.css";
+import Company from "./Company/Company";
+const Companies = ({companies}) => {
     return (
       <div>
-        {this.props.companies.map((c) => {
+        <div className={s.title}>Companies</div>
+        {companies.map((cmp) => {
           return (
-            <div>
-              <div>Name: {c.CompanyName}</div>
-              <div>Information: {c.Information}</div>
-              <div>ContactNumber: {c.ContactNumber}</div>
-            </div>
+            <Company cmp={cmp}/>
           );
         })}
       </div>
     );
-  }
+ 
 }
 
 export default Companies;

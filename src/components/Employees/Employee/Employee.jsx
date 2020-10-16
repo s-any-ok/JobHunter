@@ -1,14 +1,21 @@
 import React from "react";
 import s from "./Employee.module.css";
 import myPhoto from "../../../assets/img/emp.png";
+import { NavLink } from "react-router-dom";
 
 const Employee = (props) => {
   return (
-    <div>
+    <div key={props.employee.EmployeeID}>
       <div className={s.container}>
         <div className={s.vacancyInfo}>
           <div>
-            <img className={s.vacancyImg} src={myPhoto} />
+            <NavLink to={"/empProfile/" + props.employee.EmployeeID}>
+              <img
+                className={s.vacancyImg}
+                src={myPhoto}
+                alt={props.employee.EmployeeID}
+              />
+            </NavLink>
           </div>
           <div className={s.vacancyInfoText}>
             <div className={s.fio}>

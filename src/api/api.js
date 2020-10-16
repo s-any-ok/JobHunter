@@ -77,8 +77,10 @@ export const vacancyAPI = {
 };
 
 export const profileAPI = {
-  getEmpProfile() {
-    return instance.get("api/profile").then((response) => response.data);
+  empProfile(pid) {
+    return instance
+      .get("api/Employee/" + pid)
+      .then((response) => response.data);
   },
 };
 

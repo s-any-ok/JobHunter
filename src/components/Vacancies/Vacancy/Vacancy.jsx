@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./Vacancy.module.css";
 import myPhoto from "../../../assets/img/jh.png";
-// import * as axios from 'axios';
 
 const Vacancy = (props) => {
   return (

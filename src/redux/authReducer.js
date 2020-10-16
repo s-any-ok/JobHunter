@@ -10,6 +10,7 @@ let initState = {
   IsCompany: null,
   Login: null,
   isAuth: false,
+  isAdmin: false,
 };
 const authReducer = (state = initState, action) => {
   switch (action.type) {

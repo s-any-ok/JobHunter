@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { Route, Switch, withRouter } from "react-router-dom";
-import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import VacanciesContainer from "./components/Vacancies/VacanciesContainer";
@@ -41,7 +40,7 @@ class App extends React.Component {
               render={() => <EmployeeRegisterContainer />}
             />
             <Route
-              path="/profile"
+              path="/empProfile/:id"
               render={() => <EmployeeProfileContainer />}
             />
           </Switch>

@@ -3,21 +3,25 @@ import { connect } from "react-redux";
 import { setCompanies } from "../../redux/companiesReducer";
 import Companies from "./Companies";
 
+class CompaniesContainer extends React.Component {
+  render(){
+    return(
+      <Companies companies={this.props.companies}/>
+    );
+  }
+};
+
 const mapStateToProps = (state) => {
   return {
     companies: state.comoaniesPage.companies,
   };
 };
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setCompanies: (companies) => {
-      dispatch(setCompanies(companies));
-    },
-  };
+const mapDispatchToProps = {
+    setCompanies
 };
-const CompaniesContainer = connect(
+
+
+export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Companies);
-
-export default CompaniesContainer;
+)(CompaniesContainer);

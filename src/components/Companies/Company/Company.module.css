@@ -1,0 +1,28 @@
+.container {
+  float: left;
+  margin: 2%;
+}
+.compInfo {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 19em;
+  width: 15em;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+.compInfoText {
+  margin: auto;
+  text-align: center;
+}
+.compName {
+  color: #0094df;
+  font-family: fantasy;
+}
+.vacCount {
+  color: #abb2ba;
+}
+
+.compImg {
+  width: 100%;
+}

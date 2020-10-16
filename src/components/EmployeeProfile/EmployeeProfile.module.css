@@ -12,12 +12,12 @@
   margin-top: 1%;
   font-size: 1.6em;
   text-align: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Arial Black", Gadget, sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 2.5fr;
   grid-template-rows: auto;
   grid-template-areas:
     "photo about"
@@ -31,12 +31,12 @@
 .proInfo {
   grid-area: about;
   margin: 4%;
-  width: 50%;
+  width: 95%;
 }
 
 .proImg img {
-  width: 50%;
-  margin: 10%;
+  width: 70%;
+  margin: 10% 0% 10% 10%;
   border-radius: 5%;
 }
 
@@ -58,13 +58,13 @@
 }
 
 .var {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 600;
+  float: left;
 }
 
 .val {
-  padding-left: 70%;
   color: #0062cc;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 600;
 }

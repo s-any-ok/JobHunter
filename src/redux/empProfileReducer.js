@@ -9,6 +9,7 @@ let initState = {
     Username: "s.any.ok",
     ContactNumber: "380666493306",
   },
+  //profile: null,
 };
 const empProfileReducer = (state = initState, action) => {
   switch (action.type) {
@@ -20,14 +21,14 @@ const empProfileReducer = (state = initState, action) => {
 };
 
 //--------Actions--------//
-export const setEmpProfile = (vacancies) => ({
+export const setEmpProfile = (profile) => ({
   type: SET_EMP_PROFILE,
-  vacancies: vacancies,
+  profile,
 });
 //--------Thunks--------//
-export const getEmpProfile = () => async (dispath) => {
-  let data = await profileAPI.profileAPI();
-  dispath(setEmpProfile(data));
+export const getEmpProfile = (pid) => async (dispath) => {
+  let data = await profileAPI.empProfile(pid);
+  dispath(setEmpProfile(...data));
 };
 
 export default empProfileReducer;

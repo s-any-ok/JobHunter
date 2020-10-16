@@ -1,11 +1,7 @@
-import React from "react";
-
-const Companies = () => {
-  return (
-    <div>
-      <div>Companies</div>
-    </div>
-  );
-};
-
-export default Companies;
+.title {
+  color: black;
+  margin-top: 1%;
+  font-size: 2em;
+  text-align: center;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
