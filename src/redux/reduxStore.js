@@ -8,7 +8,7 @@ import thunkMiddleware from "redux-thunk";
 
 let reducers = combineReducers({
   vacanciesPage: vacanciesReducer,
-  comoaniesPage: companiesReducer,
+  companiesPage: companiesReducer,
   employeesPage: employeesReducer,
   empProfilePage: empProfileReducer,
   auth: authReducer,

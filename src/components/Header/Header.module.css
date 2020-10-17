@@ -35,3 +35,8 @@
   font-size: 0.9rem;
   color: white;
 }
+.userIcon {
+  float: right;
+  margin-bottom: 2%;
+  width: 15%;
+}

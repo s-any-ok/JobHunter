@@ -10,7 +10,7 @@ class LoginContainer extends Component {
   }
   render() {
     return (
-     <Login isAuth={this.isAuth} handleSubmit={this.handleSubmit.bind(this)} {...this.props}/>
+      <Login handleSubmit={this.handleSubmit.bind(this)} {...this.props} />
     );
   }
 }
@@ -18,7 +18,8 @@ class LoginContainer extends Component {
 const mapStateToProps = (state) => {
   return {
     isAuth: state.auth.isAuth,
+    ChildID: state.auth.ChildID,
   };
 };
 
-export default connect(mapStateToProps, {getLoginUser})(LoginContainer);
+export default connect(mapStateToProps, { getLoginUser })(LoginContainer);

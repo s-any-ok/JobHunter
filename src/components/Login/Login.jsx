@@ -4,7 +4,7 @@ import { Modal, Button, Row, Col, Form } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 
 const Login = (props) => {
-  if (props.isAuth) return <Redirect to="/vacancies" />;
+  if (props.isAuth) return <Redirect to={"/empProfile/" + props.ChildID} />;
   return (
     <Modal
       {...props}

@@ -6,10 +6,10 @@ const Company = ({ cmp }) => {
     <div className={s.container}>
       <div className={s.compInfo}>
         <div>
-          <img className={s.compImg} src={myPhoto} alt={cmp.CompanyName} />
+          <img className={s.compImg} src={myPhoto} alt={cmp.CompName} />
         </div>
         <div className={s.compInfoText}>
-          <div className={s.compName}>{cmp.CompanyName}</div>
+          <div className={s.compName}>{cmp.CompName}</div>
           <div className={s.vacCount}>{cmp.VacancyCount} вакансій</div>
         </div>
       </div>

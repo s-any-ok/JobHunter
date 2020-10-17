@@ -15,10 +15,12 @@ import { getVacancies } from "./redux/vacanciesReducer";
 import { compose } from "redux";
 import { getAuthUser } from "./redux/authReducer";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import { getCompanies } from "./redux/companiesReducer";
 
 class App extends React.Component {
   componentDidMount() {
     this.props.getVacancies();
+    this.props.getCompanies();
     this.props.getEmployees();
     this.props.getAuthUser();
   }
@@ -40,7 +42,7 @@ class App extends React.Component {
               render={() => <EmployeeRegisterContainer />}
             />
             <Route
-              path="/empProfile/:id"
+              path="/empProfile/:id?"
               render={() => <EmployeeProfileContainer />}
             />
           </Switch>
@@ -54,6 +56,7 @@ const mapDispatchToProps = {
   getEmployees,
   getVacancies,
   getAuthUser,
+  getCompanies,
 };
 
 export default compose(withRouter, connect(null, mapDispatchToProps))(App);

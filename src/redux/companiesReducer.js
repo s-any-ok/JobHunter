@@ -1,3 +1,5 @@
+import { companyAPI } from "../api/api";
+
 const SET_COMPANIES = "companies/SET-COMPANIES";
 const DELETE_COMPANY = "companies/DELETE-COMPANY";
 
@@ -5,42 +7,42 @@ let initState = {
   companies: [
     {
       CompanyID: 1,
-      CompanyName: "Сільпо",
+      CompName: "Сільпо",
       Information: "Потрібен вантажник у нове відділення.",
       ContactNumber: "+380501753434",
       VacancyCount: 21,
     },
     {
       CompanyID: 2,
-      CompanyName: "АТБ",
+      CompName: "АТБ",
       Information: "Потрібен вантажник у нове відділення.",
       ContactNumber: "+380501753434",
       VacancyCount: 11,
     },
     {
       CompanyID: 3,
-      CompanyName: "Сільпо",
+      CompName: "Сільпо",
       Information: "Потрібен вантажник у нове відділення.",
       ContactNumber: "+380501753434",
       VacancyCount: 21,
     },
     {
       CompanyID: 4,
-      CompanyName: "АТБ",
+      CompName: "АТБ",
       Information: "Потрібен вантажник у нове відділення.",
       ContactNumber: "+380501753434",
       VacancyCount: 11,
     },
     {
       CompanyID: 5,
-      CompanyName: "Сільпо",
+      CompName: "Сільпо",
       Information: "Потрібен вантажник у нове відділення.",
       ContactNumber: "+380501753434",
       VacancyCount: 21,
     },
     {
       CompanyID: 6,
-      CompanyName: "АТБ",
+      CompName: "АТБ",
       Information: "Потрібен вантажник у нове відділення.",
       ContactNumber: "+380501753434",
       VacancyCount: 11,
@@ -72,5 +74,9 @@ export const deleteCompanyById = (companyId) => ({
   type: DELETE_COMPANY,
   companyId,
 });
-
+//--------Thunks--------//
+export const getCompanies = () => async (dispath) => {
+  let data = await companyAPI.getCompanies();
+  dispath(setCompanies(data));
+};
 export default companiesReducer;

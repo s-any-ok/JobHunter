@@ -22,9 +22,9 @@ const authReducer = (state = initState, action) => {
 };
 
 //--------Actions--------//
-export const setAuthUserData = (Id, ChildId, IsCompany, Login, isAuth) => ({
+export const setAuthUserData = (Id, ChildID, IsCompany, Login, isAuth) => ({
   type: SET_USER_DATA,
-  data: { Id, ChildId, IsCompany, Login, isAuth },
+  data: { Id, ChildID, IsCompany, Login, isAuth },
 });
 
 //--------Thunks--------//
