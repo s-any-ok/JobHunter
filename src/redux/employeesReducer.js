@@ -69,7 +69,7 @@ export const setEmployeeUsers = (target) => async (dispath) => {
     userData.Password,
     userData.Username,
     userData.Email,
-    userData.PhoneNumber,
+    userData.ContactPhoneNumber,
     userData.SecretWord,
     DataTime
   );

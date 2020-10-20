@@ -3,20 +3,23 @@
   margin: 1.5%;
 }
 
-.vacancyInfo {
+.empInfo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 9em;
   width: 23em;
   border-radius: 16px;
+  border-top-left-radius: 90px;
+  border-bottom-left-radius: 90px;
   overflow: hidden;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
-.vacancyImg {
+.empImg {
   float: left;
   height: 90%;
   width: 80%;
+  border-radius: 60%;
 }
 
 .fio {
@@ -33,7 +36,7 @@
   font-family: "Times New Roman", Times, serif;
 }
 
-.vacancyInfoText {
+.empInfoText {
   margin: 1%;
 }
 

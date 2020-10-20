@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./EmployeeProfile.module.css";
-import myPhoto from "../../assets/img/I.jpg";
+import myPhoto from "../../assets/img/emp.png";
 import { Button } from "react-bootstrap";
 
 const EmployeeProfile = ({ profile, isAuth, ChildID, getLogoutUser }) => {

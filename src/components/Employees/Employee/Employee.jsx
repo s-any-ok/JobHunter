@@ -7,17 +7,17 @@ const Employee = (props) => {
   return (
     <div key={props.employee.EmployeeID}>
       <div className={s.container}>
-        <div className={s.vacancyInfo}>
+        <div className={s.empInfo}>
           <div>
             <NavLink to={"/empProfile/" + props.employee.EmployeeID}>
               <img
-                className={s.vacancyImg}
+                className={s.empImg}
                 src={myPhoto}
                 alt={props.employee.EmployeeID}
               />
             </NavLink>
           </div>
-          <div className={s.vacancyInfoText}>
+          <div className={s.empInfoText}>
             <div className={s.fio}>
               {props.employee.FirstName} {props.employee.LastName}
             </div>

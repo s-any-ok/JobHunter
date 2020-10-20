@@ -46,7 +46,7 @@ export const employeeAPI = {
     password,
     username,
     email,
-    phoneNumber,
+    contactPhoneNumber,
     secretWord
   ) {
     return instance
@@ -57,7 +57,7 @@ export const employeeAPI = {
         password,
         username,
         email,
-        phoneNumber,
+        contactPhoneNumber,
         secretWord,
       })
       .then((response) => response.data);
