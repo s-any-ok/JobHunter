@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2c39b550a115e8f0f225f4afb8e05b35",
+    "revision": "23c2628edad7030f30c31f14f5c26f28",
     "url": "/JobHunter-Front-end/index.html"
   },
   {
-    "revision": "b4f21e6accf8ad555ca2",
+    "revision": "f449cd85b6d7bf4e2d95",
     "url": "/JobHunter-Front-end/static/css/main.bae1dab2.chunk.css"
   },
   {
-    "revision": "e9525e92c10d86f51f0f",
-    "url": "/JobHunter-Front-end/static/js/2.a275610c.chunk.js"
+    "revision": "91b40d2d8c9ab69615b6",
+    "url": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js"
   },
   {
     "revision": "f576af3254df0679363d3e6ffe804e36",
-    "url": "/JobHunter-Front-end/static/js/2.a275610c.chunk.js.LICENSE.txt"
+    "url": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b4f21e6accf8ad555ca2",
-    "url": "/JobHunter-Front-end/static/js/main.7f959dd9.chunk.js"
+    "revision": "f449cd85b6d7bf4e2d95",
+    "url": "/JobHunter-Front-end/static/js/main.c09d4195.chunk.js"
   },
   {
     "revision": "e9b878755fe3d587e5da",

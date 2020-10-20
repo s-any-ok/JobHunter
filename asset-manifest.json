@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/JobHunter-Front-end/static/css/main.bae1dab2.chunk.css",
-    "main.js": "/JobHunter-Front-end/static/js/main.7f959dd9.chunk.js",
-    "main.js.map": "/JobHunter-Front-end/static/js/main.7f959dd9.chunk.js.map",
+    "main.js": "/JobHunter-Front-end/static/js/main.c09d4195.chunk.js",
+    "main.js.map": "/JobHunter-Front-end/static/js/main.c09d4195.chunk.js.map",
     "runtime-main.js": "/JobHunter-Front-end/static/js/runtime-main.0d55afbb.js",
     "runtime-main.js.map": "/JobHunter-Front-end/static/js/runtime-main.0d55afbb.js.map",
-    "static/js/2.a275610c.chunk.js": "/JobHunter-Front-end/static/js/2.a275610c.chunk.js",
-    "static/js/2.a275610c.chunk.js.map": "/JobHunter-Front-end/static/js/2.a275610c.chunk.js.map",
+    "static/js/2.0b901a04.chunk.js": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js",
+    "static/js/2.0b901a04.chunk.js.map": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js.map",
     "index.html": "/JobHunter-Front-end/index.html",
-    "precache-manifest.3857152ed03b0cf03d1d758deb7cc836.js": "/JobHunter-Front-end/precache-manifest.3857152ed03b0cf03d1d758deb7cc836.js",
+    "precache-manifest.df23d6327da229b7ebb1ed55a0df7730.js": "/JobHunter-Front-end/precache-manifest.df23d6327da229b7ebb1ed55a0df7730.js",
     "service-worker.js": "/JobHunter-Front-end/service-worker.js",
     "static/css/main.bae1dab2.chunk.css.map": "/JobHunter-Front-end/static/css/main.bae1dab2.chunk.css.map",
-    "static/js/2.a275610c.chunk.js.LICENSE.txt": "/JobHunter-Front-end/static/js/2.a275610c.chunk.js.LICENSE.txt",
+    "static/js/2.0b901a04.chunk.js.LICENSE.txt": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js.LICENSE.txt",
     "static/media/I.jpg": "/JobHunter-Front-end/static/media/I.bc7007d0.jpg",
     "static/media/authUser.png": "/JobHunter-Front-end/static/media/authUser.95f81f82.png",
     "static/media/jh.png": "/JobHunter-Front-end/static/media/jh.78d4daa2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0d55afbb.js",
-    "static/js/2.a275610c.chunk.js",
+    "static/js/2.0b901a04.chunk.js",
     "static/css/main.bae1dab2.chunk.css",
-    "static/js/main.7f959dd9.chunk.js"
+    "static/js/main.c09d4195.chunk.js"
   ]
 }
