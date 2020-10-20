@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23c2628edad7030f30c31f14f5c26f28",
+    "revision": "1e32a88d5c076f34ec8c7534dd85f998",
     "url": "/JobHunter-Front-end/index.html"
   },
   {
-    "revision": "f449cd85b6d7bf4e2d95",
+    "revision": "b284cd260ac5507316cd",
     "url": "/JobHunter-Front-end/static/css/main.bae1dab2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f449cd85b6d7bf4e2d95",
-    "url": "/JobHunter-Front-end/static/js/main.c09d4195.chunk.js"
+    "revision": "b284cd260ac5507316cd",
+    "url": "/JobHunter-Front-end/static/js/main.46490489.chunk.js"
   },
   {
     "revision": "e9b878755fe3d587e5da",
