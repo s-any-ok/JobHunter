@@ -4,12 +4,12 @@ import { setEmployeeUsers } from "../../redux/empReducer";
 import EmployeeRegister from "./EmployeeRegister";
 
 class EmployeeRegisterContainer extends React.Component {
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.setEmployeeUsers(e.target);
-  }
+  };
   render() {
-    return <EmployeeRegister handleSubmit={this.handleSubmit.bind(this)} />;
+    return <EmployeeRegister handleSubmit={this.handleSubmit} />;
   }
 }
 

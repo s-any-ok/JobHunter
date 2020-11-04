@@ -2,8 +2,10 @@ import { companyAPI } from "../api/api";
 
 const SET_COMPANIES = "companies/SET-COMPANIES";
 const DELETE_COMPANY = "companies/DELETE-COMPANY";
+const TOGGLE_IS_FETCHING = "companies/TOGGLE-IS-FETCHING";
 
 let initState = {
+  isFetching: false,
   companies: [
     {
       CompanyID: 1,
@@ -60,6 +62,8 @@ const companiesReducer = (state = initState, action) => {
           (c) => c.CompanyID !== action.companyId
         ),
       };
+    case TOGGLE_IS_FETCHING:
+      return { ...state, isFetching: action.isFetching };
     default:
       return state;
   }
@@ -74,9 +78,16 @@ export const deleteCompanyById = (companyId) => ({
   type: DELETE_COMPANY,
   companyId,
 });
+export const toggleIsFetching = (isFetching) => ({
+  type: TOGGLE_IS_FETCHING,
+  isFetching,
+});
 //--------Thunks--------//
 export const getCompanies = () => async (dispath) => {
+  dispath(toggleIsFetching(true));
+  if (initState.companies.length > 0) dispath(toggleIsFetching(false));
   let data = await companyAPI.getCompanies();
   dispath(setCompanies(data));
+  dispath(toggleIsFetching(false));
 };
 export default companiesReducer;

@@ -7,7 +7,7 @@ import { getEmpProfile } from "../../redux/empProfReducer";
 import EmployeeProfile from "./EmployeeProfile";
 
 class EmployeeProfileContainer extends React.Component {
-  componentDidMount() {
+  refreshProfile() {
     let pid = this.props.match.params.id;
     if (!pid) {
       pid = this.props.ChildID;
@@ -16,8 +16,13 @@ class EmployeeProfileContainer extends React.Component {
     this.props.getEmpProfile(pid);
   }
 
-  componentDidUpdate() {
-    this.componentDidMount();
+  componentDidMount() {
+    this.refreshProfile();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.userId !== prevProps.match.params.userId)
+      this.refreshProfile();
   }
 
   render() {

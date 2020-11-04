@@ -28,6 +28,7 @@ const Employees = ({ employees, isFetching }) => {
   return (
     <div className={s.container}>
       <div className={s.title}>Employees</div>
+
       {isFetching ? <Preloader /> : null}
       <div>
         {employees.map((e) => (

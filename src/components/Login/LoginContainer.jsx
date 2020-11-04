@@ -4,14 +4,12 @@ import { getLoginUser } from "../../redux/authReducer";
 import Login from "./Login";
 
 class LoginContainer extends Component {
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.getLoginUser(e.target);
-  }
+  };
   render() {
-    return (
-      <Login handleSubmit={this.handleSubmit.bind(this)} {...this.props} />
-    );
+    return <Login handleSubmit={this.handleSubmit} {...this.props} />;
   }
 }
 
