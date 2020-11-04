@@ -1,16 +1,43 @@
 .container {
   float: left;
-  margin: 2%;
+  width: 18%;
+  margin: 2% 0% 2% 2%;
 }
+
 .compInfo {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  height: 19em;
-  width: 15em;
+  height: 25vw;
+  width: 90%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
+
+@media screen and (max-width: 1020px) {
+  .container {
+    width: 23%;
+    margin: 2% 0% 2% 2%;
+  }
+  .compInfo {
+    display: grid;
+    height: 30vw;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 48%;
+    margin: 2% 0% 10% 2%;
+  }
+  .compInfo {
+    display: grid;
+    height: 60vw;
+    width: 90%;
+  }
+}
+
 .compInfoText {
   margin: auto;
   text-align: center;

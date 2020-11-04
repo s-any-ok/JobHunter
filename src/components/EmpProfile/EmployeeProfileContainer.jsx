@@ -21,7 +21,7 @@ class EmployeeProfileContainer extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.match.params.userId !== prevProps.match.params.userId)
+    if (this.props.match.params.id !== prevProps.match.params.id)
       this.refreshProfile();
   }
 

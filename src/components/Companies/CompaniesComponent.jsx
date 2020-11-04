@@ -24,7 +24,6 @@ const mapStateToProps = (state) => {
 
 //-----------------------------------------------//
 const Companies = ({ companies, isFetching }) => {
-  debugger;
   return (
     <div className={s.container}>
       <div className={s.title}>Companies</div>

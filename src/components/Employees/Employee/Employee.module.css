@@ -1,13 +1,12 @@
 .container {
   float: left;
-  margin: 1.5%;
+  width: 31%;
+  margin: 2% 0% 2% 2.33%;
 }
-
 .empInfo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 9em;
-  width: 23em;
+  width: 90%;
   border-radius: 16px;
   border-top-left-radius: 90px;
   border-bottom-left-radius: 90px;
@@ -15,9 +14,20 @@
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
+@media screen and (max-width: 1600px) {
+  .container {
+    width: 90%;
+    margin: 5% 0% 7% 10%;
+  }
+  .empInfo {
+    border-radius: 16px;
+    border-top-left-radius: 240px;
+    border-bottom-left-radius: 240px;
+  }
+}
+
 .empImg {
   float: left;
-  height: 90%;
   width: 80%;
   border-radius: 60%;
 }

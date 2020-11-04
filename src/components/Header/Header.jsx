@@ -28,11 +28,9 @@ const Header = ({ UserLogin, isAuth, UserId }) => {
             </Button>
           )}
           {isAuth && (
-            <div key={UserId}>
-              <Link to={`/empProfile/`}>
-                <img className={s.userIcon} src={userIcon} alt={UserLogin} />
-              </Link>
-            </div>
+            <Link to={`/empProfile/`}>
+              <img className={s.userIcon} src={userIcon} alt={UserLogin} />
+            </Link>
           )}
 
           <LoginContainer show={modalShow} onHide={() => setModalShow(false)} />

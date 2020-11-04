@@ -1,13 +1,20 @@
 .container {
   float: left;
-  margin: 2%;
+  width: 48%;
+  margin: 2% 0% 2% 2%;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+    margin: 2% 0% 2% 10%;
+  }
 }
 
 .vacancyInfo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 14em;
-  width: 35em;
+  width: 90%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
