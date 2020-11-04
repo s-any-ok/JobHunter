@@ -5,16 +5,16 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className={s.navbar}>
-      <NavLink to="/vacancies" activeClassName={s.active}>
+      <NavLink to="/vacancies" className={s.navBtn} activeClassName={s.active}>
         Vacancies
       </NavLink>
-      <NavLink to="/companies" activeClassName={s.active}>
+      <NavLink to="/companies" className={s.navBtn} activeClassName={s.active}>
         Companies
       </NavLink>
-      <NavLink to="/employees" activeClassName={s.active}>
+      <NavLink to="/employees" className={s.navBtn} activeClassName={s.active}>
         Employees
       </NavLink>
-      <NavLink to="/about" activeClassName={s.active}>
+      <NavLink to="/about" className={s.navBtn} activeClassName={s.active}>
         About
       </NavLink>
     </div>

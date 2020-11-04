@@ -20,9 +20,11 @@ const Companies = ({ companies }) => {
   return (
     <div className={s.container}>
       <div className={s.title}>Companies</div>
-      {companies.map((cmp) => {
-        return <Company cmp={cmp} />;
-      })}
+      <div>
+        {companies.map((cmp) => {
+          return <Company cmp={cmp} />;
+        })}
+      </div>
     </div>
   );
 };

@@ -18,7 +18,7 @@ const mapStateToProps = (state) => {
 //-----------------------------------------------//
 const Vacancies = ({ vacancies }) => {
   return (
-    <div>
+    <div className={s.container}>
       <div className={s.title}>Vacancies</div>
       {vacancies.map((v) => (
         <Vacancy vacancy={v} />
