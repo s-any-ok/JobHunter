@@ -1,8 +1,8 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
-import companiesReducer from "./companiesReducer";
-import employeesReducer from "./employeesReducer";
-import vacanciesReducer from "./vacanciesReducer";
-import empProfileReducer from "./empProfileReducer";
+import companiesReducer from "./cmpReducer";
+import employeesReducer from "./empReducer";
+import vacanciesReducer from "./vacReducer";
+import empProfileReducer from "./empProfReducer";
 import authReducer from "./authReducer";
 import thunkMiddleware from "redux-thunk";
 

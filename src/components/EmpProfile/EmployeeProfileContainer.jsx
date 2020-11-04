@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "redux";
 import { getLogoutUser } from "../../redux/authReducer";
-import { getEmpProfile } from "../../redux/empProfileReducer";
+import { getEmpProfile } from "../../redux/empProfReducer";
 import EmployeeProfile from "./EmployeeProfile";
 
 class EmployeeProfileContainer extends React.Component {

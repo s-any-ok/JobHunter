@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { setEmployeeUsers } from "../../redux/employeesReducer";
+import { setEmployeeUsers } from "../../redux/empReducer";
 import EmployeeRegister from "./EmployeeRegister";
 
 class EmployeeRegisterContainer extends React.Component {

@@ -20,7 +20,9 @@ export const employeeAPI = {
     skills,
     adress,
     gender,
-    birthday
+    birthday,
+    email,
+    contactPhoneNumber
   ) {
     return instance
       .post("api/Employee", {
@@ -36,19 +38,12 @@ export const employeeAPI = {
         adress,
         gender,
         birthday,
+        email,
+        contactPhoneNumber,
       })
       .then((response) => response.data);
   },
-  setUser(
-    ChildID,
-    isCompany,
-    login,
-    password,
-    username,
-    email,
-    contactPhoneNumber,
-    secretWord
-  ) {
+  setUser(ChildID, isCompany, login, password, username, secretWord) {
     return instance
       .post("api/User", {
         ChildID,
@@ -56,8 +51,6 @@ export const employeeAPI = {
         login,
         password,
         username,
-        email,
-        contactPhoneNumber,
         secretWord,
       })
       .then((response) => response.data);

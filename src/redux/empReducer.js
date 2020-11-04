@@ -3,7 +3,7 @@ import {
   createGuid,
   getDataTime,
   getObjOfData,
-} from "../components/helpers/helpers";
+} from "../components/utils/formHelpers";
 
 const SET_EMPLOYEES = "employees/SET-EMPLOYEES";
 const TOGGLE_IS_FETCHING = "employees/TOGGLE-IS-FETCHING";
@@ -68,8 +68,6 @@ export const setEmployeeUsers = (target) => async (dispath) => {
     userData.Login,
     userData.Password,
     userData.Username,
-    userData.Email,
-    userData.ContactPhoneNumber,
     userData.SecretWord,
     DataTime
   );
@@ -85,7 +83,9 @@ export const setEmployeeUsers = (target) => async (dispath) => {
     userData.Skills,
     userData.Adress,
     userData.Gender,
-    userData.Birthday
+    userData.Birthday,
+    userData.Email,
+    userData.ContactPhoneNumber
   );
   alert(respEmp);
   dispath(setEmployees([userData]));

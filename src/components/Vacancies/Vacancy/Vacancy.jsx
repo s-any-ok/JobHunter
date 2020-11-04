@@ -8,7 +8,11 @@ const Vacancy = (props) => {
       <div className={s.container}>
         <div className={s.vacancyInfo}>
           <div>
-            <img className={s.vacancyImg} src={myPhoto} />
+            <img
+              className={s.vacancyImg}
+              src={myPhoto}
+              alt={props.vacancy.Objective}
+            />
           </div>
           <div className={s.vacancyInfoText}>
             <div className={s.vacancyTitile}>{props.vacancy.Objective}</div>

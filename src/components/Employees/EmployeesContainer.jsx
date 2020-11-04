@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getIsFetching, getEmployees } from "../../redux/employeesSelectors";
-import Employees from "./Employees";
+import { getIsFetching, getEmployees } from "../../redux/empSelectors";
+import Preloader from "../common/Preloader/Preloader";
+import Employee from "./Employee/Employee";
+import s from "./Employees.module.css";
 
 class EmployeesContainer extends React.Component {
   render() {
@@ -19,6 +21,21 @@ const mapStateToProps = (state) => {
     employees: getEmployees(state),
     isFetching: getIsFetching(state),
   };
+};
+
+//-----------------------------------------------//
+const Employees = ({ employees, isFetching }) => {
+  return (
+    <>
+      <div className={s.title}>Employees</div>
+      {isFetching ? <Preloader /> : null}
+      <div>
+        {employees.map((e) => (
+          <Employee employee={e} />
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default connect(mapStateToProps, null)(EmployeesContainer);

@@ -1,6 +1,6 @@
 import Cookies from "universal-cookie";
 import { authAPI } from "../api/api";
-import { getObjOfData } from "../components/helpers/helpers";
+import { getObjOfData } from "../components/utils/formHelpers";
 
 const SET_USER_DATA = "auth/SET-USER-DATA";
 
