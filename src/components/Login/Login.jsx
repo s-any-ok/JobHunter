@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Login.module.css";
 import { Modal, Button, Row, Col, Form } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
+import { createFiledGroup } from "../common/FormsControl/FormsControl";
 
 const Login = (props) => {
   if (props.isAuth) return <Redirect to={"/empProfile/" + props.ChildID} />;
@@ -20,24 +21,14 @@ const Login = (props) => {
           <Row>
             <Col sm={12}>
               <Form onSubmit={props.handleSubmit}>
-                <Form.Group controlId="Login">
-                  <Form.Label>Login</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="login"
-                    required
-                    placeholder="Login"
-                  ></Form.Control>
-                </Form.Group>
-                <Form.Group controlId="Password">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    name="password"
-                    required
-                    placeholder="Password"
-                  ></Form.Control>
-                </Form.Group>
+                {createFiledGroup("Login", "Login", "text", "Login", true)}
+                {createFiledGroup(
+                  "Password",
+                  "Password",
+                  "password",
+                  "Password",
+                  true
+                )}
                 <Form.Group>
                   <Button variant="dark" type="submit" block>
                     Login
