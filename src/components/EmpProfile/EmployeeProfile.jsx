@@ -3,8 +3,17 @@ import s from "./EmployeeProfile.module.css";
 import myPhoto from "../../assets/img/emp.png";
 import { Button } from "react-bootstrap";
 
-const EmployeeProfile = ({ profile, isAuth, ChildID, getLogoutUser }) => {
+const EmployeeProfile = ({
+  profile,
+  isAuth,
+  ChildID,
+  getLogoutUser,
+  history,
+}) => {
   const isCorrectUser = isAuth && profile.EmployeeID === ChildID;
+  const logout = () => {
+    getLogoutUser().then(() => history.push("/"));
+  };
   return (
     <div className={s.mainContainer}>
       <div className={s.empForm}>
@@ -36,7 +45,7 @@ const EmployeeProfile = ({ profile, isAuth, ChildID, getLogoutUser }) => {
         </div>
       </div>
       {isCorrectUser && (
-        <Button className={s.logout} onClick={getLogoutUser} variant="dark">
+        <Button className={s.logout} onClick={logout} variant="dark">
           Logout
         </Button>
       )}
