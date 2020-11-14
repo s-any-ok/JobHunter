@@ -1,4 +1,4 @@
-import { employeeAPI } from "../api/api";
+import { employeeAPI, userAPI } from "../api/api";
 import {
   createGuid,
   getDataTime,
@@ -62,7 +62,7 @@ export const setEmployeeUsers = (target) => async (dispath) => {
   const Guid = createGuid();
   const DataTime = getDataTime(); // check
   let userData = getObjOfData(formValues, target);
-  await employeeAPI.setUser(
+  await userAPI.setUser(
     Guid,
     false,
     userData.Login,

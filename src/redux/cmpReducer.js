@@ -1,4 +1,10 @@
-import { companyAPI } from "../api/api";
+import { companyAPI, userAPI } from "../api/api";
+
+import {
+  createGuid,
+  getDataTime,
+  getObjOfData,
+} from "../components/utils/formHelpers";
 
 const SET_COMPANIES = "companies/SET-COMPANIES";
 const DELETE_COMPANY = "companies/DELETE-COMPANY";
@@ -89,5 +95,45 @@ export const getCompanies = () => async (dispath) => {
   let data = await companyAPI.getCompanies();
   dispath(setCompanies(data));
   dispath(toggleIsFetching(false));
+};
+export const setCompanyUsers = (target) => async (dispath) => {
+  const formValues = [
+    "Login",
+    "Password",
+    "Username",
+    "SecretWord",
+    "PhoneNumber",
+    "Email",
+    "TIN",
+    "CompanyName",
+    "Information",
+    "Link",
+    "BusinessType",
+  ];
+  const Guid = createGuid();
+  const DataTime = getDataTime(); // check
+  let userData = getObjOfData(formValues, target);
+  await userAPI.setUser(
+    Guid,
+    true,
+    userData.Login,
+    userData.Password,
+    userData.Username,
+    userData.SecretWord,
+    DataTime
+  );
+  let respCmp = await companyAPI.setCompany(
+    Guid,
+    userData.TIN,
+    userData.CompanyName,
+    userData.Information,
+    false,
+    userData.Link,
+    userData.BusinessType,
+    userData.PhoneNumber,
+    userData.Email
+  );
+  alert(respCmp);
+  dispath(setCompanies([userData]));
 };
 export default companiesReducer;

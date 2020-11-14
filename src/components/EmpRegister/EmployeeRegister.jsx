@@ -1,14 +1,17 @@
 import React from "react";
 import s from "./EmployeeRegister.module.css";
 import { Button, Col, Form, InputGroup } from "react-bootstrap";
-import { createFiledGroup } from "../common/FormsControl/FormsControl";
+import {
+  createFiledGroup,
+  createFormSelect,
+} from "../common/FormsControl/FormsControl";
 
-const EmployeeRegister = (props) => {
+const EmployeeRegister = ({ handleSubmit }) => {
   return (
     <div>
       <div className={s.title}>Register</div>
       <div className={s.regForm}>
-        <Form onSubmit={props.handleSubmit}>
+        <Form onSubmit={handleSubmit}>
           <Form.Row>
             {createFiledGroup(
               "Login",
@@ -94,7 +97,6 @@ const EmployeeRegister = (props) => {
           </Form.Row>
           {createFiledGroup("Birthday", "Birthday", "text", "dd-mm-yyyy")}
           {createFiledGroup("Objective", "Objective", "text", "Your objective")}
-          {createFiledGroup("Birthday", "Birthday", "text", "dd-mm-yyyy")}
           {createFiledGroup(
             "Education",
             "Education",
@@ -115,15 +117,7 @@ const EmployeeRegister = (props) => {
           )}
           {createFiledGroup("Skills", "Skills", "text", "Your skills")}
 
-          <Form.Group controlId="Gender">
-            <Form.Label>Gender</Form.Label>
-            <Form.Control as="select" defaultValue="Choose...">
-              <option>Choose...</option>
-              <option>Male</option>
-              <option>Female</option>
-              <option>Custom</option>
-            </Form.Control>
-          </Form.Group>
+          {createFormSelect("Gender", "Gender", ["Male", "Female", "Custom"])}
           {createFiledGroup("Adress", "Adress", "text", "Your adress")}
           {createFiledGroup(
             "PhoneNumber",

@@ -1,51 +1,61 @@
 import React from "react";
 import s from "./CompanyRegister.module.css";
 import { Button, Col, Form, InputGroup } from "react-bootstrap";
+import {
+  createFiledGroup,
+  createFormSelect,
+} from "../common/FormsControl/FormsControl";
 
-
-const CompanyRegister = () => {
+const CompanyRegister = ({ handleSubmit }) => {
   return (
     <div>
       <div className={s.title}>Register</div>
       <div className={s.regForm}>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Row>
-            <Form.Group as={Col} controlId="Login">
-              <Form.Label>Login</Form.Label>
-              <Form.Control type="text" placeholder="Enter login" required />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="Password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Enter password"
-                required
-              />
-            </Form.Group>
+            {createFiledGroup(
+              "Login",
+              "Login",
+              "text",
+              "Enter login",
+              true,
+              Col
+            )}
+            {createFiledGroup(
+              "Password",
+              "Password",
+              "password",
+              "Enter password",
+              true,
+              Col
+            )}
           </Form.Row>
 
           <Form.Row>
-            <Form.Group as={Col} controlId="Email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-            </Form.Group>
-
-            <Form.Group as={Col} controlId="PasswordConfirm">
-              <Form.Label>Confirm Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Enter password again"
-                required
-              />
-            </Form.Group>
+            {createFiledGroup(
+              "Email",
+              "Email",
+              "email",
+              "Enter email",
+              false,
+              Col
+            )}
+            {createFiledGroup(
+              "PasswordConfirm",
+              "Confirm Password",
+              "password",
+              "Enter password again",
+              true,
+              Col
+            )}
           </Form.Row>
 
-          <Form.Group controlId="SecretWord">
-            <Form.Label>Secret word</Form.Label>
-            <Form.Control placeholder="Enter your secret word" />
-          </Form.Group>
-
+          {createFiledGroup(
+            "SecretWord",
+            "Secret word",
+            "text",
+            "Enter your secret word"
+          )}
           <Form.Group controlId="Username">
             <Form.Label>Username</Form.Label>
             <InputGroup>
@@ -60,15 +70,53 @@ const CompanyRegister = () => {
           </Form.Group>
 
           <Form.Row>
-            <Form.Group as={Col} controlId="UserType">
-              <Form.Label>Who are you?</Form.Label>
-              <Form.Control as="select" defaultValue="Choose...">
-                <option>Choose...</option>
-                <option>Company</option>
-                <option>Employee</option>
-              </Form.Control>
-            </Form.Group>
+            {createFiledGroup("TIN", "TIN", "text", "Enter TIN", true, Col)}
+            {createFiledGroup(
+              "CompanyName",
+              "Company Name",
+              "text",
+              "Enter company name",
+              true,
+              Col
+            )}
           </Form.Row>
+          <Form.Group controlId="Information">
+            <Form.Label>Information</Form.Label>
+            <Form.Control
+              as="textarea"
+              placeholder="Enter some information about your company"
+              rows={3}
+            />
+          </Form.Group>
+          {createFiledGroup(
+            "Link",
+            "Link",
+            "text",
+            "Enter link to your website"
+          )}
+          {createFormSelect("BusinessType", "Business Type", [
+            "Financial",
+            "Product",
+            "Social",
+            "Education",
+            "Security",
+            "Retailers",
+            "Services",
+            "Agriculture",
+            "Transportation",
+            "RealEstate",
+            "Advertising",
+            "Manufacturing",
+            "Mining",
+            "Utilities",
+            "Other",
+          ])}
+          {createFiledGroup(
+            "PhoneNumber",
+            "Phone Number",
+            "text",
+            "Your current phone number"
+          )}
 
           <Form.Group>
             <Form.Check

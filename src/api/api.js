@@ -43,23 +43,36 @@ export const employeeAPI = {
       })
       .then((response) => response.data);
   },
-  setUser(ChildID, isCompany, login, password, username, secretWord) {
-    return instance
-      .post("api/User", {
-        ChildID,
-        isCompany,
-        login,
-        password,
-        username,
-        secretWord,
-      })
-      .then((response) => response.data);
-  },
 };
 
 export const companyAPI = {
   getCompanies() {
     return instance.get("api/Company").then((response) => response.data);
+  },
+  setCompany(
+    companyID,
+    TIN,
+    compName,
+    information,
+    isVip,
+    link,
+    businessType,
+    email,
+    contactPhoneNumber
+  ) {
+    return instance
+      .post("api/Company", {
+        companyID,
+        TIN,
+        compName,
+        information,
+        isVip,
+        link,
+        businessType,
+        email,
+        contactPhoneNumber,
+      })
+      .then((response) => response.data);
   },
 };
 
@@ -83,6 +96,21 @@ export const authAPI = {
       .post("api/user/login", {
         login,
         password,
+      })
+      .then((response) => response.data);
+  },
+};
+
+export const userAPI = {
+  setUser(ChildID, isCompany, login, password, username, secretWord) {
+    return instance
+      .post("api/User", {
+        ChildID,
+        isCompany,
+        login,
+        password,
+        username,
+        secretWord,
       })
       .then((response) => response.data);
   },

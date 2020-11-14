@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import VacanciesComponent from "./components/Vacancies/VacanciesComponent";
 import CompaniesComponent from "./components/Companies/CompaniesComponent";
-import CompanyRegister from "./components/CmpRegister/CompanyRegister";
+import CompanyRegisterContainer from "./components/CmpRegister/CompanyRegisterContainer";
 import EmployeesContainer from "./components/Employees/EmployeesContainer";
 import EmployeeRegisterContainer from "./components/EmpRegister/EmployeeRegisterContainer";
 import EmployeeProfileContainer from "./components/EmpProfile/EmployeeProfileContainer";
@@ -36,7 +36,10 @@ class App extends React.Component {
             <Route path="/companies" render={() => <CompaniesComponent />} />
             <Route path="/vacancies" render={() => <VacanciesComponent />} />
             <Route path="/employees" render={() => <EmployeesContainer />} />
-            <Route path="/compRegister" render={() => <CompanyRegister />} />
+            <Route
+              path="/compRegister"
+              render={() => <CompanyRegisterContainer />}
+            />
             <Route
               path="/empRegister"
               render={() => <EmployeeRegisterContainer />}

@@ -35,3 +35,17 @@ const formLableControl = (label, type, placeholder, isRequired) => {
     </>
   );
 };
+
+export const createFormSelect = (id, label, options) => {
+  return (
+    <Form.Group controlId={id}>
+      <Form.Label>{label}</Form.Label>
+      <Form.Control as="select" defaultValue="Choose...">
+        <option>Choose...</option>
+        {options.map((op) => (
+          <option>{op}</option>
+        ))}
+      </Form.Control>
+    </Form.Group>
+  );
+};
