@@ -16,6 +16,7 @@ class LoginContainer extends Component {
 const mapStateToProps = (state) => {
   return {
     isAuth: state.auth.isAuth,
+    IsCompany: state.auth.IsCompany,
     ChildID: state.auth.ChildID,
   };
 };

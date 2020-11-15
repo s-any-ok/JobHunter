@@ -9,6 +9,7 @@ import CompanyRegisterContainer from "./components/CmpRegister/CompanyRegisterCo
 import EmployeesContainer from "./components/Employees/EmployeesContainer";
 import EmployeeRegisterContainer from "./components/EmpRegister/EmployeeRegisterContainer";
 import EmployeeProfileContainer from "./components/EmpProfile/EmployeeProfileContainer";
+import CompanyProfileContainer from "./components/СmpProfile/CompanyProfileContainer";
 import { connect } from "react-redux";
 import { getEmployees } from "./redux/empReducer";
 import { getVacancies } from "./redux/vacReducer";
@@ -47,6 +48,10 @@ class App extends React.Component {
             <Route
               path="/empProfile/:id?"
               render={() => <EmployeeProfileContainer />}
+            />
+            <Route
+              path="/cmpProfile/:id?"
+              render={() => <CompanyProfileContainer />}
             />
           </Switch>
         </div>

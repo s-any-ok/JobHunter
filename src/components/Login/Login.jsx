@@ -5,7 +5,10 @@ import { Redirect } from "react-router-dom";
 import { createFiledGroup } from "../common/FormsControl/FormsControl";
 
 const Login = (props) => {
-  if (props.isAuth) return <Redirect to={"/empProfile/" + props.ChildID} />;
+  if (props.isAuth && props.IsCompany !== "1")
+    return <Redirect to={"/empProfile/" + props.ChildID} />;
+  if (props.isAuth && props.IsCompany === "1")
+    return <Redirect to={"/cmpProfile/" + props.ChildID} />;
   return (
     <Modal
       {...props}

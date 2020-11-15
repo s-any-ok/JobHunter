@@ -1,5 +1,4 @@
 import { companyAPI, userAPI } from "../api/api";
-
 import {
   createGuid,
   getDataTime,
@@ -13,48 +12,13 @@ const TOGGLE_IS_FETCHING = "companies/TOGGLE-IS-FETCHING";
 let initState = {
   isFetching: false,
   companies: [
-    {
-      CompanyID: 1,
-      CompName: "Сільпо",
-      Information: "Потрібен вантажник у нове відділення.",
-      ContactNumber: "+380501753434",
-      VacancyCount: 21,
-    },
-    {
-      CompanyID: 2,
-      CompName: "АТБ",
-      Information: "Потрібен вантажник у нове відділення.",
-      ContactNumber: "+380501753434",
-      VacancyCount: 11,
-    },
-    {
-      CompanyID: 3,
-      CompName: "Сільпо",
-      Information: "Потрібен вантажник у нове відділення.",
-      ContactNumber: "+380501753434",
-      VacancyCount: 21,
-    },
-    {
-      CompanyID: 4,
-      CompName: "АТБ",
-      Information: "Потрібен вантажник у нове відділення.",
-      ContactNumber: "+380501753434",
-      VacancyCount: 11,
-    },
-    {
-      CompanyID: 5,
-      CompName: "Сільпо",
-      Information: "Потрібен вантажник у нове відділення.",
-      ContactNumber: "+380501753434",
-      VacancyCount: 21,
-    },
-    {
-      CompanyID: 6,
-      CompName: "АТБ",
-      Information: "Потрібен вантажник у нове відділення.",
-      ContactNumber: "+380501753434",
-      VacancyCount: 11,
-    },
+    // {
+    //   CompanyID: 1,
+    //   CompName: "Сільпо",
+    //   Information: "Потрібен вантажник у нове відділення.",
+    //   ContactNumber: "+380501753434",
+    //   VacancyCount: 21,
+    // },
   ],
 };
 const companiesReducer = (state = initState, action) => {

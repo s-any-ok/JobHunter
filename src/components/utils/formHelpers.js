@@ -15,6 +15,6 @@ export const createGuid = () => {
 export const getDataTime = () => {
   let today = new Date();
   let date =
-    today.getFullYear() + "-" + today.getDate() + "-" + (today.getMonth() + 1);
+    today.getMonth() + 1 + "-" + today.getDate() + "-" + today.getFullYear();
   return date;
 };

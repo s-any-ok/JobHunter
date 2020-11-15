@@ -15,6 +15,7 @@ const mapStateToProps = (state) => {
     isAuth: state.auth.isAuth,
     UserLogin: state.auth.Login,
     UserId: state.auth.ChildID,
+    IsCompany: state.auth.IsCompany,
   };
 };
 

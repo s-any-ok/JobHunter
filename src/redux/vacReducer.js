@@ -1,4 +1,5 @@
 import { vacancyAPI } from "../api/api";
+import { getDataTime, getObjOfData } from "../components/utils/formHelpers";
 
 const SET_VACANCIES = "vacancies/SET-VACANCIES";
 const TOGGLE_IS_FETCHING = "vacancies/TOGGLE-IS-FETCHING";
@@ -6,22 +7,14 @@ const TOGGLE_IS_FETCHING = "vacancies/TOGGLE-IS-FETCHING";
 let initState = {
   isFetching: false,
   vacancies: [
-    {
-      VacancyID: 1,
-      VacancyName: "Вантажник",
-      Company: "Нова Пошта",
-      Information: "Потрібен вантажник у нове відділення.",
-      ContactNumber: "+380501753434",
-      Salary: 500.0,
-    },
-    {
-      VacancyID: 2,
-      VacancyName: "Касир",
-      Company: "АТБ",
-      Information: "Потрібен касир у нове відділення.",
-      ContactNumber: "+380666483206",
-      Salary: 400.0,
-    },
+    // {
+    //   VacancyID: 1,
+    //   VacancyName: "Вантажник",
+    //   Company: "Нова Пошта",
+    //   Information: "Потрібен вантажник у нове відділення.",
+    //   ContactNumber: "+380501753434",
+    //   Salary: 500.0,
+    // },
   ],
 };
 const vacanciesReducer = (state = initState, action) => {
@@ -51,6 +44,34 @@ export const getVacancies = () => async (dispath) => {
   let data = await vacancyAPI.getVacancies();
   dispath(setVacancies(data));
   dispath(toggleIsFetching(false));
+};
+
+export const setCompanyVacancy = (target, Id) => async (dispath) => {
+  const formValues = [
+    "Objective",
+    "Experience",
+    "Employment",
+    "Information",
+    "Salary",
+    "ContactPhoneNumber",
+    "Adress",
+  ];
+
+  const DataTime = getDataTime(); // check
+  let userData = getObjOfData(formValues, target);
+  let respVac = await vacancyAPI.setVacancy(
+    Id,
+    userData.Objective,
+    userData.Experience,
+    userData.Employment,
+    userData.Information,
+    userData.Salary,
+    userData.ContactPhoneNumber,
+    userData.Adress,
+    DataTime
+  );
+  alert(respVac);
+  dispath(setVacancies([userData]));
 };
 
 export default vacanciesReducer;

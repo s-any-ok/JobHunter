@@ -80,6 +80,31 @@ export const vacancyAPI = {
   getVacancies() {
     return instance.get("api/Vacancy").then((response) => response.data);
   },
+  setVacancy(
+    companyID,
+    objective,
+    experience,
+    employment,
+    information,
+    salary,
+    contactPhoneNumber,
+    adress,
+    dataTime
+  ) {
+    return instance
+      .post("api/Vacancy", {
+        companyID,
+        objective,
+        experience,
+        employment,
+        information,
+        salary,
+        contactPhoneNumber,
+        adress,
+        dataTime,
+      })
+      .then((response) => response.data);
+  },
 };
 
 export const profileAPI = {
@@ -87,6 +112,9 @@ export const profileAPI = {
     return instance
       .get("api/Employee/" + pid)
       .then((response) => response.data);
+  },
+  cmpProfile(pid) {
+    return instance.get("api/Company/" + pid).then((response) => response.data);
   },
 };
 

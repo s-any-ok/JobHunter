@@ -32,7 +32,9 @@ const Employees = ({ employees, isFetching }) => {
       {isFetching ? <Preloader /> : null}
       <div>
         {employees.map((e) => (
-          <Employee employee={e} />
+          <div key={e.EmployeeID}>
+            <Employee employee={e} />
+          </div>
         ))}
       </div>
     </div>

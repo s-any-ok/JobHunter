@@ -1,27 +1,19 @@
 import React from "react";
 import s from "./Vacancy.module.css";
-import myPhoto from "../../../assets/img/jh.png";
+import vacImg from "../../../assets/img/vacancy.png";
 
-const Vacancy = (props) => {
+const Vacancy = ({ vacancy }) => {
   return (
-    <div>
-      <div className={s.container}>
-        <div className={s.vacancyInfo}>
-          <div>
-            <img
-              className={s.vacancyImg}
-              src={myPhoto}
-              alt={props.vacancy.Objective}
-            />
-          </div>
-          <div className={s.vacancyInfoText}>
-            <div className={s.vacancyTitile}>{props.vacancy.Objective}</div>
-            <div className={s.company}>{props.vacancy.Employment}</div>
-            <div className={s.vacancyDescription}>
-              {props.vacancy.Information}
-            </div>
-            <div className={s.salary}>{props.vacancy.Salary}$</div>
-          </div>
+    <div className={s.container}>
+      <div className={s.vacancyInfo}>
+        <div>
+          <img className={s.vacancyImg} src={vacImg} alt={vacancy.Objective} />
+        </div>
+        <div className={s.vacancyInfoText}>
+          <div className={s.vacancyTitile}>{vacancy.Objective}</div>
+          <div className={s.company}>{vacancy.Employment}</div>
+          <div className={s.vacancyDescription}>{vacancy.Information}</div>
+          <div className={s.salary}>{vacancy.Salary}$</div>
         </div>
       </div>
     </div>

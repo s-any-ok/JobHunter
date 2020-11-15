@@ -3,17 +3,17 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "redux";
 import { getLogoutUser } from "../../redux/authReducer";
-import { getEmpProfile } from "../../redux/empProfReducer";
-import EmployeeProfile from "./EmployeeProfile";
+import { getCmpProfile } from "../../redux/cmpProfReducer";
+import CompanyProfile from "./CompanyProfile";
 
-class EmployeeProfileContainer extends React.Component {
+class CompanyProfileContainer extends React.Component {
   refreshProfile() {
     let pid = this.props.match.params.id;
     if (!pid) {
-      if (this.props.IsCompany !== "1") pid = this.props.ChildID;
+      if (this.props.IsCompany !== "0") pid = this.props.ChildID;
       if (!pid) pid = this.props.history.push("/");
     }
-    this.props.getEmpProfile(pid);
+    this.props.getCmpProfile(pid);
   }
 
   componentDidMount() {
@@ -26,24 +26,24 @@ class EmployeeProfileContainer extends React.Component {
   }
 
   render() {
-    return <EmployeeProfile {...this.props} />;
+    return <CompanyProfile {...this.props} />;
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    profile: state.empProfilePage.profile,
+    profile: state.cmpProfilePage.profile,
     isAuth: state.auth.isAuth,
     IsCompany: state.auth.IsCompany,
     ChildID: state.auth.ChildID,
   };
 };
 const mapDispatchToProps = {
-  getEmpProfile,
+  getCmpProfile,
   getLogoutUser,
 };
 
 export default compose(
   withRouter,
   connect(mapStateToProps, mapDispatchToProps)
-)(EmployeeProfileContainer);
+)(CompanyProfileContainer);

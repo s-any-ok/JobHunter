@@ -3,6 +3,7 @@ import companiesReducer from "./cmpReducer";
 import employeesReducer from "./empReducer";
 import vacanciesReducer from "./vacReducer";
 import empProfileReducer from "./empProfReducer";
+import cmpProfileReducer from "./cmpProfReducer";
 import authReducer from "./authReducer";
 import thunkMiddleware from "redux-thunk";
 
@@ -11,6 +12,7 @@ let reducers = combineReducers({
   companiesPage: companiesReducer,
   employeesPage: employeesReducer,
   empProfilePage: empProfileReducer,
+  cmpProfilePage: cmpProfileReducer,
   auth: authReducer,
 });
 

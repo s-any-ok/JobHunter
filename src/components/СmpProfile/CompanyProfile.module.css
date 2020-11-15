@@ -2,9 +2,9 @@
   display: grid;
   grid-template-rows: 3fr 100px;
 }
-.empForm {
+.cmpForm {
   width: 70%;
-  height: 80%;
+  height: 85%;
   margin-top: 4%;
   margin-left: 15%;
   border-radius: 16px;
@@ -36,6 +36,7 @@
   grid-area: about;
   margin: 4%;
   width: 95%;
+  height: 95;
 }
 
 .proImg img {
@@ -44,20 +45,20 @@
   border-radius: 60%;
 }
 
-.fullName {
+.cmpName {
   color: black;
   margin-top: 1%;
   font-size: 1.4em;
 }
 
-.profession {
+.businesstype {
   color: #0062cc;
   font-size: 1em;
 }
 
 .about {
   display: grid;
-  margin-top: 7%;
+  margin-top: 5%;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -73,9 +74,25 @@
   font-weight: 600;
 }
 
-.logout {
-  text-align: center;
-  margin-left: 77%;
-  width: 8%;
+.btns {
+  display: flex;
+  width: 25%;
   height: 50%;
+  text-align: center;
+  margin-left: 69%;
+}
+
+.btn {
+  margin: 0% 3%;
+}
+
+b.vip {
+  font-size: 1rem;
+  color: #ff9500;
+}
+
+.info {
+  width: 70%;
+  padding: 5% 0%;
+  text-align: justify;
 }

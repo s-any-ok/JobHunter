@@ -4,9 +4,11 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NavBar from "./Nav/NavBar";
 import LoginContainer from "../Login/LoginContainer";
-import userIcon from "../../assets/img/authUser.png";
+import userIcon from "../../assets/img/user.png";
+import companyIcon from "../../assets/img/authCompany.png";
 
-const Header = ({ UserLogin, isAuth, UserId }) => {
+const Header = ({ UserLogin, isAuth, IsCompany }) => {
+  const isComp = IsCompany === "1";
   const [modalShow, setModalShow] = useState(false);
   return (
     <div className={s.header}>
@@ -27,12 +29,20 @@ const Header = ({ UserLogin, isAuth, UserId }) => {
               Login
             </Button>
           )}
-          {isAuth && (
+          {isAuth && !isComp && (
             <Link to={`/empProfile/`}>
               <img className={s.userIcon} src={userIcon} alt={UserLogin} />
             </Link>
           )}
-
+          {isAuth && isComp && (
+            <Link to={`/cmpProfile/`}>
+              <img
+                className={s.companyIcon}
+                src={companyIcon}
+                alt={UserLogin}
+              />
+            </Link>
+          )}
           <LoginContainer show={modalShow} onHide={() => setModalShow(false)} />
         </div>
       </div>

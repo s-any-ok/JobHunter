@@ -29,9 +29,11 @@ const Companies = ({ companies, isFetching }) => {
       <div className={s.title}>Companies</div>
       {isFetching ? <Preloader /> : null}
       <div>
-        {companies.map((cmp) => {
-          return <Company cmp={cmp} />;
-        })}
+        {companies.map((cmp) => (
+          <div key={cmp.CompanyID}>
+            <Company cmp={cmp} />
+          </div>
+        ))}
       </div>
     </div>
   );
