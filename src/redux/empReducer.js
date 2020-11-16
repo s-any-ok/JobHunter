@@ -35,6 +35,7 @@ export const toggleIsFetching = (isFetching) => ({
 //--------Thunks--------//
 export const getEmployees = () => async (dispath) => {
   dispath(toggleIsFetching(true));
+  if (initState.employees.length > 0) dispath(toggleIsFetching(false));
   let data = await employeeAPI.getEmployees();
   dispath(setEmployees(data));
   dispath(toggleIsFetching(false));

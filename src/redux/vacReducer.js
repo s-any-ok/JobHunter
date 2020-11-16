@@ -7,14 +7,16 @@ const TOGGLE_IS_FETCHING = "vacancies/TOGGLE-IS-FETCHING";
 let initState = {
   isFetching: false,
   vacancies: [
-    // {
-    //   VacancyID: 1,
-    //   VacancyName: "Вантажник",
-    //   Company: "Нова Пошта",
-    //   Information: "Потрібен вантажник у нове відділення.",
-    //   ContactNumber: "+380501753434",
-    //   Salary: 500.0,
-    // },
+    {
+      VacancyID: 1,
+      Objective: "Вантажник",
+      Employment: "Full time",
+      Experience: "< 1 year",
+      Information: "Потрібен вантажник у нове відділення.",
+      ContactNumber: "+380501753434",
+      Adress: "Lutsk",
+      Salary: 500.0,
+    },
   ],
 };
 const vacanciesReducer = (state = initState, action) => {

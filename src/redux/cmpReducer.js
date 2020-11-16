@@ -12,13 +12,13 @@ const TOGGLE_IS_FETCHING = "companies/TOGGLE-IS-FETCHING";
 let initState = {
   isFetching: false,
   companies: [
-    // {
-    //   CompanyID: 1,
-    //   CompName: "Сільпо",
-    //   Information: "Потрібен вантажник у нове відділення.",
-    //   ContactNumber: "+380501753434",
-    //   VacancyCount: 21,
-    // },
+    {
+      CompanyID: 1,
+      CompName: "Сільпо",
+      Information: "Потрібен вантажник у нове відділення.",
+      ContactNumber: "+380501753434",
+      VacancyCount: 21,
+    },
   ],
 };
 const companiesReducer = (state = initState, action) => {

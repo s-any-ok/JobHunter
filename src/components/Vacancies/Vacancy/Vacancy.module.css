@@ -11,50 +11,46 @@
   }
 }
 
-.vacancyInfo {
+.vacancyInfoContent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   width: 90%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  font-family: "Franklin Gothic Medium", sans-serif;
+  font-weight: normal;
 }
 
 .vacancyImg {
-  float: left;
-  height: 100%;
-  width: 80%;
+  width: 100%;
 }
 
-.vacancyTitile {
-  padding-left: 20%;
-  padding-top: 2%;
-  margin: 1%;
-  font-size: 1.1em;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+.vacancyFullInfo {
+  padding: 2%;
+  text-align: left;
 }
 
-.company {
-  padding-left: 30%;
-  font-size: 0.7em;
-  font-family: "Times New Roman", Times, serif;
+.objective {
+  font-size: 1.4rem;
+  padding-bottom: 2%;
 }
 
-.vacancyInfoText {
-  margin: 1%;
+.compAdress {
+  color: #6b7886;
+  font-size: 0.8rem;
+  padding-bottom: 1%;
 }
 
-.vacancyDescription {
-  float: left;
-  padding-top: 2%;
-  padding-right: 5%;
-  font-size: 0.9em;
-  font-family: "Times New Roman", Times, serif;
+.vacancyInfo,
+.expEmp {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
 .salary {
   float: right;
-  font-size: 1.3em;
-  padding: 4% 8%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  padding: 3%;
 }
