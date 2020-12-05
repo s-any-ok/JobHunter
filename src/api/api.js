@@ -80,6 +80,9 @@ export const vacancyAPI = {
   getVacancies() {
     return instance.get("api/Vacancy").then((response) => response.data);
   },
+  vacInfo(pid) {
+    return instance.get("api/Vacancy/" + pid).then((response) => response.data);
+  },
   setVacancy(
     companyID,
     objective,
@@ -116,6 +119,11 @@ export const profileAPI = {
   cmpProfile(pid) {
     return instance.get("api/Company/" + pid).then((response) => response.data);
   },
+  getCmpVacancies(pid) {
+    return instance
+      .get("api/Vacancy/comp/" + pid)
+      .then((response) => response.data);
+  },
 };
 
 export const authAPI = {
@@ -140,6 +148,23 @@ export const userAPI = {
         username,
         secretWord,
       })
+      .then((response) => response.data);
+  },
+};
+
+export const respondAPI = {
+  setRespond(VacancyID, EmployeeID, RespondData) {
+    return instance
+      .post("api/RespondToVacancy", {
+        VacancyID,
+        EmployeeID,
+        RespondData,
+      })
+      .then((response) => response.data);
+  },
+  getVacResponds(vId) {
+    return instance
+      .get("api/RespondToVacancy/" + vId)
       .then((response) => response.data);
   },
 };

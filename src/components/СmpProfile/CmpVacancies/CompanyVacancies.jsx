@@ -1,11 +1,28 @@
 import React from "react";
-import s from "./Vacancy.module.css";
+import s from "./CompanyVacancies.module.css";
+import Preloader from "../../common/Preloader/Preloader";
 import vacImg from "../../../assets/img/vacancy.png";
 import { NavLink } from "react-router-dom";
 
-const Vacancy = ({ vacancy }) => {
+const CompanyVacancies = ({ vacancies, isFetching }) => {
   return (
     <div className={s.container}>
+      <div className={s.title}>Vacancies</div>
+      {isFetching ? <Preloader /> : null}
+      <div>
+        {vacancies.map((v) => (
+          <div key={v.VacancyID}>
+            <CompanyVacancy vacancy={v} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const CompanyVacancy = ({ vacancy }) => {
+  return (
+    <div className={s.vacContainer}>
       <div className={s.vacancyInfoContent}>
         <div>
           <NavLink to={"/Vacancy/" + vacancy.VacancyID}>
@@ -30,4 +47,4 @@ const Vacancy = ({ vacancy }) => {
   );
 };
 
-export default Vacancy;
+export default CompanyVacancies;

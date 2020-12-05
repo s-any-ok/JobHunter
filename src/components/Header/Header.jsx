@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import s from "./Header.module.css";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import NavBar from "./Nav/NavBar";
 import LoginContainer from "../Login/LoginContainer";
 import userIcon from "../../assets/img/user.png";
@@ -13,9 +13,11 @@ const Header = ({ UserLogin, isAuth, IsCompany }) => {
   return (
     <div className={s.header}>
       <div className={s.container}>
-        <div className={s.logo}>
-          <big>JH</big>
-        </div>
+        <NavLink to={`/ratingTable`} style={{ textDecoration: "none" }}>
+          <div className={s.logo}>
+            <big>JH</big>
+          </div>
+        </NavLink>
         <div>
           <NavBar />
         </div>

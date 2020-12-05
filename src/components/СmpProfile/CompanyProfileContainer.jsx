@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { compose } from "redux";
 import { getLogoutUser } from "../../redux/authReducer";
-import { getCmpProfile } from "../../redux/cmpProfReducer";
+import { getCmpProfile, getCmpVacancies } from "../../redux/cmpProfReducer";
 import CompanyProfile from "./CompanyProfile";
 
 class CompanyProfileContainer extends React.Component {
@@ -14,6 +14,7 @@ class CompanyProfileContainer extends React.Component {
       if (!pid) pid = this.props.history.push("/");
     }
     this.props.getCmpProfile(pid);
+    this.props.getCmpVacancies(pid);
   }
 
   componentDidMount() {
@@ -33,6 +34,7 @@ class CompanyProfileContainer extends React.Component {
 const mapStateToProps = (state) => {
   return {
     profile: state.cmpProfilePage.profile,
+    vacancies: state.cmpProfilePage.vacancies,
     isAuth: state.auth.isAuth,
     IsCompany: state.auth.IsCompany,
     ChildID: state.auth.ChildID,
@@ -40,6 +42,7 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = {
   getCmpProfile,
+  getCmpVacancies,
   getLogoutUser,
 };
 
