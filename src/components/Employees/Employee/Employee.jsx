@@ -16,10 +16,10 @@ const Employee = ({ employee }) => {
           <div className={s.fio}>
             {employee.FirstName} {employee.LastName}
           </div>
-          <div className={s.gender}>{employee.Gender}</div>
-          <div className={s.education}>{employee.Education}</div>
-          <div className={s.contact}>{employee.Objective}</div>
-          <div className={s.contact}>{employee.BirthDay}</div>
+          <div className={s.gender}><b>Стать:</b> {employee.Gender}</div>
+          <div className={s.education}><b>Освіта:</b> {employee.Education}</div>
+          <div className={s.contact}><b>Професія:</b> {employee.Objective}</div>
+          <div className={s.contact}><b>Дата народження:</b> {employee.BirthDay}</div>
         </div>
       </div>
     </div>

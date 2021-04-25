@@ -6,7 +6,41 @@ const TOGGLE_IS_FETCHING = "vacancies/TOGGLE-IS-FETCHING";
 
 let initState = {
   isFetching: false,
-  vacancies: [],
+  vacancies: [
+    {
+      VacancyID: 1,
+      Objective: "Front-end developer (Javascript)",
+      Company: "React",
+      Information: "Компания AffReact предлагает вакансию Frontend разработчика в киевском офисе компании.",
+      ContactNumber: "+380501753434",
+      Employment: "Повна зайнятість.",
+      Experience: "Досвід роботи від 2 років.",
+      Adress: "Київ, вулиця Басейна, 2.",
+      Salary: 500.0,
+    },
+    {
+      VacancyID: 2,
+      Objective: "DevOps Engineer",
+      Company: "React",
+      Information: "Are you tired of being busy with bullshit and those things that can hardly unveil your potential to the full?",
+      ContactNumber: "+380501753434",
+      Employment: "Повна зайнятість.",
+      Experience: "Досвід роботи від 1 років.",
+      Adress: "Київ, вулиця Басейна, 1/2А.",
+      Salary: 400.0,
+    },
+    {
+      VacancyID: 3,
+      Objective: "DevOps Engineer",
+      Company: "React",
+      Information: "Are you tired of being busy with bullshit and those things that can hardly unveil your potential to the full?",
+      ContactNumber: "+380501753434",
+      Employment: "Повна зайнятість.",
+      Experience: "Досвід роботи від 1 років.",
+      Adress: "Київ, вулиця Басейна, 1/2А.",
+      Salary: 400.0,
+    },
+  ],
 };
 const vacanciesReducer = (state = initState, action) => {
   switch (action.type) {

@@ -13,7 +13,7 @@ const Header = ({ UserLogin, isAuth, IsCompany }) => {
   return (
     <div className={s.header}>
       <div className={s.container}>
-        <NavLink to={`/ratingTable`} style={{ textDecoration: "none" }}>
+        <NavLink to={`/ratingTable`} style={{ textDecoration: "none", display: "flex", justifyContent: "center", alignItems: 'center' }}>
           <div className={s.logo}>
             <big>JH</big>
           </div>

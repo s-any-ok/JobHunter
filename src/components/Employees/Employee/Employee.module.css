@@ -1,66 +1,53 @@
 .container {
-  float: left;
-  width: 31%;
-  margin: 2% 0% 2% 2.33%;
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .empInfo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   width: 90%;
+  height: 220px;
   border-radius: 16px;
-  border-top-left-radius: 90px;
-  border-bottom-left-radius: 90px;
+  border-top-left-radius: 105px;
+  border-bottom-left-radius: 105px;
   overflow: hidden;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
-@media screen and (max-width: 1600px) {
-  .container {
-    width: 90%;
-    margin: 5% 0% 7% 10%;
-  }
-  .empInfo {
-    border-radius: 16px;
-    border-top-left-radius: 240px;
-    border-bottom-left-radius: 240px;
-  }
-}
-
 .empImg {
-  float: left;
-  width: 80%;
-  border-radius: 60%;
+
 }
 
 .fio {
-  padding-left: 7%;
-  padding-top: 2%;
-  margin: 1%;
-  font-size: 1em;
+  color: #0062cc;
+  font-size: 1.9em;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+.gender, .education, .contact {
+  display: flex;
+  justify-content: space-between;
+}
+
 .gender {
-  padding-left: 30%;
-  font-size: 0.8em;
-  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .empInfoText {
-  margin: 1%;
+  width: 100%;
+  padding: 20px;
 }
 
 .education {
-  float: left;
-  padding-top: 2%;
-  padding-right: 5%;
-  font-size: 0.8em;
-  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .contact {
-  float: right;
-  font-size: 0.6em;
-  padding: 3% 8%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

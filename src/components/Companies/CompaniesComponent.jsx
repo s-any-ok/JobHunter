@@ -26,15 +26,16 @@ const mapStateToProps = (state) => {
 const Companies = ({ companies, isFetching }) => {
   return (
     <div className={s.container}>
-      <div className={s.title}>Companies</div>
+      <div className={"title"}>Companies</div>
       {isFetching ? <Preloader /> : null}
-      <div>
+      <div className={s.companyContainer}>
         {companies.map((cmp) => (
-          <div key={cmp.CompanyID}>
-            <Company cmp={cmp} />
-          </div>
+            <div key={cmp.CompanyID}>
+              <Company cmp={cmp} />
+            </div>
         ))}
       </div>
+
     </div>
   );
 };

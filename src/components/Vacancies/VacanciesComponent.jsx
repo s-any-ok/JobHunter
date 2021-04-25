@@ -26,9 +26,9 @@ const mapStateToProps = (state) => {
 const Vacancies = ({ vacancies, isFetching }) => {
   return (
     <div className={s.container}>
-      <div className={s.title}>Vacancies</div>
+      <div className={"title"}>Vacancies</div>
       {isFetching ? <Preloader /> : null}
-      <div>
+      <div className={s.vacancyContainer}>
         {vacancies.map((v) => (
           <div key={v.VacancyID}>
             <Vacancy vacancy={v} />

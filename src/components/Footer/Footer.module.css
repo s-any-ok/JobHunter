@@ -1,29 +1,34 @@
 .footer {
-  grid-area: f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height:70px;
   background-color: #111111;
-  box-sizing: border-box;
   color: white;
-  width: 100%;
   border-top: solid #535353a6 1.8px;
+  margin-top:auto;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
   color: white;
-  margin: 12px 0px 0px 10%;
   font-size: 1em;
-  text-align: left;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'MuseoSansCyrl', sans-serif;
 }
 
 .medias {
-  color: white;
-  margin: 12px 10% 0px 0px;
-  font-size: 1em;
-  text-align: right;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.medias img:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }

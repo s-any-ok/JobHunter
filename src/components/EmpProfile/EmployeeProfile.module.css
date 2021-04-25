@@ -1,22 +1,14 @@
 .mainContainer {
-  display: grid;
-  grid-template-rows: 3fr 100px;
+  display: flex;
+  justify-content: center;
+
+  padding-top: 40px;
 }
 .empForm {
-  width: 70%;
-  height: 80%;
-  margin-top: 4%;
-  margin-left: 15%;
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-}
-.title {
-  color: black;
-  margin-top: 1%;
-  font-size: 1.6em;
-  text-align: center;
-  font-family: "Arial Black", Gadget, sans-serif;
 }
 
 .container {
@@ -34,8 +26,7 @@
 }
 .proInfo {
   grid-area: about;
-  margin: 4%;
-  width: 95%;
+  padding: 25px;
 }
 
 .proImg img {
@@ -46,8 +37,9 @@
 
 .fullName {
   color: black;
-  margin-top: 1%;
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-weight: 700;
+  font-family: 'MuseoSansCyrl', sans-serif;
 }
 
 .profession {
@@ -57,20 +49,26 @@
 
 .about {
   display: grid;
-  margin-top: 7%;
+  margin-top: 60px;
   grid-template-columns: 1fr 1fr;
 }
 
 .var {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 600;
+  font-family: 'MuseoSansCyrl', sans-serif;
   float: left;
 }
 
 .val {
   color: #0062cc;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 600;
+  font-family: 'MuseoSansCyrl', sans-serif;
+}
+
+.var div, .val div {
+  margin-bottom: 5px;
 }
 
 .logout {

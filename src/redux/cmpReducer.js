@@ -14,6 +14,34 @@ let initState = {
   companies: [
     {
       CompanyID: 1,
+      CompName: "React",
+      Information: "REACT — крупный международный холдинг, предоставляющий широкий спектр услуг в сфере маркетинга, исследования международных финансовых рынков и IT-разработок.",
+      ContactNumber: "+380635506287",
+      VacancyCount: 2,
+    },
+    {
+      CompanyID: 2,
+      CompName: "Сільпо",
+      Information: "Потрібен вантажник у нове відділення.",
+      ContactNumber: "+380501753434",
+      VacancyCount: 21,
+    },
+    {
+      CompanyID: 2,
+      CompName: "Сільпо",
+      Information: "Потрібен вантажник у нове відділення.",
+      ContactNumber: "+380501753434",
+      VacancyCount: 21,
+    },
+    {
+      CompanyID: 2,
+      CompName: "Сільпо",
+      Information: "Потрібен вантажник у нове відділення.",
+      ContactNumber: "+380501753434",
+      VacancyCount: 21,
+    },
+    {
+      CompanyID: 2,
       CompName: "Сільпо",
       Information: "Потрібен вантажник у нове відділення.",
       ContactNumber: "+380501753434",

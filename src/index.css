@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src:  url('./fonts/MuseoSansCyrl.otf') format('woff2'),
+  url('./fonts/MuseoSansCyrl.otf') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+
+.title {
+  color: black;
+  margin-top: 1%;
+  font-size: 2em;
+  text-align: center;
+  font-style: italic;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+}

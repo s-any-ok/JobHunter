@@ -5,7 +5,7 @@ import { createFiledGroup } from "../common/FormsControl/FormsControl";
 const RatingTable = ({ ratingItems, handleSubmit }) => {
   return (
     <div className={s.wrapContainer}>
-      <div className={s.title}>Rating Table</div>
+      <div className={"title"}>Rating Table</div>
       <div className={s.container}>
         <Table striped bordered hover size="sm">
           <thead>

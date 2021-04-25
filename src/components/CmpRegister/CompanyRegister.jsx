@@ -9,7 +9,7 @@ import {
 const CompanyRegister = ({ handleSubmit }) => {
   return (
     <div>
-      <div className={s.title}>Register</div>
+      <div className={"title"}>Register</div>
       <div className={s.regForm}>
         <Form onSubmit={handleSubmit}>
           <Form.Row>

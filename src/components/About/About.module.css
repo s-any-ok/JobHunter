@@ -4,34 +4,22 @@
 }
 
 .container {
-  float: left;
-  width: 80%;
-  margin: 2% 0% 2% 12%;
+  display: flex;
+  justify-content: center;
+
+  padding-top: 40px;
 }
 
 .info {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  height: 20vw;
-  width: 95%;
+  display: flex;
+  height: 20rem;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-}
-
-.title {
-  color: black;
-  margin-top: 1%;
-  font-size: 2em;
-  text-align: center;
-  font-family: "Arial Black", Gadget, sans-serif;
-}
-
-img {
-  width: 80%;
+  padding: 50px;
 }
 
 .infoText {
-  padding: 16% 16%;
-  font-size: 2.7vw;
+  font-size: 1.2rem;
+  font-family: 'MuseoSansCyrl', sans-serif;
 }

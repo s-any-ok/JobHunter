@@ -19,7 +19,7 @@ const VacancyInfo = ({
     <>
       <div className={s.mainContainer}>
         <div className={s.empForm}>
-          <div className={s.title}>Vacancy</div>
+          <div className={"title"}>Vacancy</div>
           <div className={s.container}>
             <div className={s.proImg}>
               <img src={myPhoto} alt="profilePhoto" />

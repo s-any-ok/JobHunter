@@ -27,10 +27,10 @@ const mapStateToProps = (state) => {
 const Employees = ({ employees, isFetching }) => {
   return (
     <div className={s.container}>
-      <div className={s.title}>Employees</div>
+      <div className={"title"}>Employees</div>
 
       {isFetching ? <Preloader /> : null}
-      <div>
+      <div className={s.employeeContainer}>
         {employees.map((e) => (
           <div key={e.EmployeeID}>
             <Employee employee={e} />

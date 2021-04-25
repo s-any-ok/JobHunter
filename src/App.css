@@ -1,21 +1,9 @@
-html,
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-}
 .wrapper {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  grid-template-columns: 100vw;
-  grid-template-areas:
-    "h"
-    "c"
-    "f";
-  grid-template-rows: 70px 1fr 60px;
 }
 
-.wrapper-content {
-  grid-area: c;
-  background-color: rgb(243, 243, 243);
+.container {
+  margin-top: 80px;
 }

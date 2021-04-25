@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import {Container} from 'react-bootstrap';
 import { Route, Switch, withRouter } from "react-router-dom";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Footer from "./components/Footer/Footer";
@@ -29,10 +30,9 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="wrapper">
+      <div className={"wrapper"}>
         <HeaderContainer />
-        <Footer />
-        <div className="wrapper-content">
+        <Container className={"container"}>
           <Switch>
             <Route path="/" render={() => <EmployeesContainer />} exact />
             <Route
@@ -64,7 +64,8 @@ class App extends React.Component {
               render={() => <VacancyInfoContainer />}
             />
           </Switch>
-        </div>
+        </Container>
+        <Footer />
       </div>
     );
   }

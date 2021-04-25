@@ -2,7 +2,17 @@ import { profileAPI } from "../api/api";
 const SET_EMP_PROFILE = "empProfile/SET-EMP-PROFILE";
 
 let initState = {
-  profile: {},
+  profile: {
+  EmployeeID: 4,
+      FirstName: "Олександр",
+      LastName: "Левак",
+      Gender: "Чоловік",
+      Education: "Вища освіта",
+      AdditionalEducation: "Coursera",
+      Skills: "React, JavaScript",
+      BirthDay: "03.01.2002",
+      Adress: "Київ, Луцьк"
+  },
 };
 const empProfileReducer = (state = initState, action) => {
   switch (action.type) {

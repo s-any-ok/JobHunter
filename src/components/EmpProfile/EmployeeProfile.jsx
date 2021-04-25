@@ -17,7 +17,7 @@ const EmployeeProfile = ({
   return (
     <div className={s.mainContainer}>
       <div className={s.empForm}>
-        <div className={s.title}>Profile</div>
+        <div className={"title"}>Profile</div>
         <div className={s.container}>
           <div className={s.proImg}>
             <img src={myPhoto} alt="profilePhoto" />

@@ -9,7 +9,42 @@ const SET_EMPLOYEES = "employees/SET-EMPLOYEES";
 const TOGGLE_IS_FETCHING = "employees/TOGGLE-IS-FETCHING";
 
 let initState = {
-  employees: [],
+  employees: [{
+    EmployeeID: 1,
+    FirstName: "Олександр",
+    LastName: "Левак",
+    Gender: "Чоловік",
+    Education: "Вища освіта",
+    Objective: "Front-end",
+    BirthDay: "03.01.2002",
+  },
+    {
+      EmployeeID: 2,
+      FirstName: "Олександр",
+      LastName: "Левак",
+      Gender: "Чоловік",
+      Education: "Вища освіта",
+      Objective: "Front-end",
+      BirthDay: "03.01.2002",
+    },
+    {
+      EmployeeID: 3,
+      FirstName: "Олександр",
+      LastName: "Левак",
+      Gender: "Чоловік",
+      Education: "Вища освіта",
+      Objective: "Front-end",
+      BirthDay: "03.01.2002",
+    },
+    {
+      EmployeeID: 4,
+      FirstName: "Олександр",
+      LastName: "Левак",
+      Gender: "Чоловік",
+      Education: "Вища освіта",
+      Objective: "Front-end",
+      BirthDay: "03.01.2002",
+    }],
   isFetching: false,
 };
 const employeesReducer = (state = initState, action) => {

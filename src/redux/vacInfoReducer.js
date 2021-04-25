@@ -6,8 +6,20 @@ const SET_VAC_INFO = "vacancyInfo/SET-VAC-INFO";
 const SET_CMP_INFO = "vacancyInfo/SET-CMP-INFO";
 
 let initState = {
-  vacancy: {},
-  company: {},
+  vacancy: {
+    VacancyID: 1,
+    Objective: "Front-end developer (Javascript)",
+    Information: "Компания AffReact предлагает вакансию Frontend разработчика в киевском офисе компании.",
+    ContactNumber: "+380501753434",
+    Employment: "Повна зайнятість.",
+    Experience: "Досвід роботи від 2 років.",
+    Adress: "Київ, вулиця Басейна, 2.",
+    Salary: 500.0,
+  },
+  company: {
+    CompanyID: 1,
+    CompName: "React",
+  },
 };
 const vacInfoReducer = (state = initState, action) => {
   switch (action.type) {

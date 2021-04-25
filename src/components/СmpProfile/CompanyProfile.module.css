@@ -1,22 +1,16 @@
 .mainContainer {
-  display: grid;
+  display: flex;
+  justify-content: center;
+
+  padding-top: 40px;
 }
 .cmpForm {
-  width: 70%;
-  height: 85%;
-  margin-top: 4%;
-  margin-left: 15%;
+  width: 100%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
-.title {
-  color: black;
-  margin-top: 1%;
-  font-size: 1.6em;
-  text-align: center;
-  font-family: "Arial Black", Gadget, sans-serif;
-}
+
 
 .container {
   display: grid;
@@ -33,9 +27,8 @@
 }
 .proInfo {
   grid-area: about;
-  margin: 4%;
-  width: 95%;
-  height: 95;
+  padding: 5px;
+  padding-right: 40px;
 }
 
 .proImg img {
@@ -46,7 +39,6 @@
 
 .cmpName {
   color: black;
-  margin-top: 1%;
   font-size: 1.4em;
 }
 
@@ -57,20 +49,26 @@
 
 .about {
   display: grid;
-  margin-top: 5%;
+  margin-top: 30px;
   grid-template-columns: 1fr 1fr;
 }
 
 .var {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 600;
+  font-family: 'MuseoSansCyrl', sans-serif;
   float: left;
 }
 
 .val {
   color: #0062cc;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 600;
+  font-family: 'MuseoSansCyrl', sans-serif;
+}
+
+.var div, .val div {
+  margin-bottom: 5px;
 }
 
 .btns {
@@ -91,7 +89,6 @@ b.vip {
 }
 
 .info {
-  width: 70%;
-  padding: 5% 0%;
+  padding: 40px 0;
   text-align: justify;
 }

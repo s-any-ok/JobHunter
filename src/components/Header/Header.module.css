@@ -1,25 +1,33 @@
 .header {
-  grid-area: h;
-  background-color: #111111;
-  box-sizing: border-box;
+  position: fixed;
+
   width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #111111;
   border-bottom: solid #535353a6 1.8px;
 }
 
 .container {
-  max-width: 1980px;
-  margin: 0px auto;
-  display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
 .logo {
   color: white;
   text-align: center;
-  text-align: left;
-  padding-left: 20%;
   font-size: 2em;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+  font-family: 'MuseoSansCyrl', sans-serif;
+  transition: transform 1s ease-in-out;
+}
+
+.logo:hover {
+  transition: transform 1s ease-in-out;
+  transform: rotate(-30deg) scale(1.1);
 }
 
 .login {
@@ -29,7 +37,8 @@
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+  font-family: 'MuseoSansCyrl', sans-serif;
 }
 
 @media screen and (max-width: 1030px) {
@@ -42,6 +51,7 @@
   background-color: black;
   border: black;
   font-size: 1.1em;
+  font-weight: 600;
   color: white;
 }
 .companyIcon {

@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const CompanyVacancies = ({ vacancies, isFetching }) => {
   return (
     <div className={s.container}>
-      <div className={s.title}>Vacancies</div>
+      <div className={"title"}>Vacancies</div>
       {isFetching ? <Preloader /> : null}
       <div>
         {vacancies.map((v) => (
