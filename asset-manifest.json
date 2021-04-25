@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/JobHunter-Front-end/static/css/main.bae1dab2.chunk.css",
-    "main.js": "/JobHunter-Front-end/static/js/main.46490489.chunk.js",
-    "main.js.map": "/JobHunter-Front-end/static/js/main.46490489.chunk.js.map",
+    "main.css": "/JobHunter-Front-end/static/css/main.85d5b059.chunk.css",
+    "main.js": "/JobHunter-Front-end/static/js/main.dfd71dce.chunk.js",
+    "main.js.map": "/JobHunter-Front-end/static/js/main.dfd71dce.chunk.js.map",
     "runtime-main.js": "/JobHunter-Front-end/static/js/runtime-main.0d55afbb.js",
     "runtime-main.js.map": "/JobHunter-Front-end/static/js/runtime-main.0d55afbb.js.map",
-    "static/js/2.0b901a04.chunk.js": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js",
-    "static/js/2.0b901a04.chunk.js.map": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js.map",
+    "static/js/2.6ba204b2.chunk.js": "/JobHunter-Front-end/static/js/2.6ba204b2.chunk.js",
+    "static/js/2.6ba204b2.chunk.js.map": "/JobHunter-Front-end/static/js/2.6ba204b2.chunk.js.map",
     "index.html": "/JobHunter-Front-end/index.html",
-    "precache-manifest.f9e4dd7f00d33408fd7f2dc6a14176a0.js": "/JobHunter-Front-end/precache-manifest.f9e4dd7f00d33408fd7f2dc6a14176a0.js",
+    "precache-manifest.b9504897e8b53587c4d7c1802922bf9f.js": "/JobHunter-Front-end/precache-manifest.b9504897e8b53587c4d7c1802922bf9f.js",
     "service-worker.js": "/JobHunter-Front-end/service-worker.js",
-    "static/css/main.bae1dab2.chunk.css.map": "/JobHunter-Front-end/static/css/main.bae1dab2.chunk.css.map",
-    "static/js/2.0b901a04.chunk.js.LICENSE.txt": "/JobHunter-Front-end/static/js/2.0b901a04.chunk.js.LICENSE.txt",
-    "static/media/I.jpg": "/JobHunter-Front-end/static/media/I.bc7007d0.jpg",
-    "static/media/authUser.png": "/JobHunter-Front-end/static/media/authUser.95f81f82.png",
-    "static/media/jh.png": "/JobHunter-Front-end/static/media/jh.78d4daa2.png"
+    "static/css/main.85d5b059.chunk.css.map": "/JobHunter-Front-end/static/css/main.85d5b059.chunk.css.map",
+    "static/js/2.6ba204b2.chunk.js.LICENSE.txt": "/JobHunter-Front-end/static/js/2.6ba204b2.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/JobHunter-Front-end/static/media/MuseoSansCyrl.02f7d6b8.otf",
+    "static/media/cmp.png": "/JobHunter-Front-end/static/media/cmp.4c2eba7f.png",
+    "static/media/facebook.svg": "/JobHunter-Front-end/static/media/facebook.700dba70.svg",
+    "static/media/instagram.svg": "/JobHunter-Front-end/static/media/instagram.fc23b902.svg",
+    "static/media/telegram.svg": "/JobHunter-Front-end/static/media/telegram.b4971d60.svg",
+    "static/media/twitter.svg": "/JobHunter-Front-end/static/media/twitter.c9f12008.svg",
+    "static/media/youtube.svg": "/JobHunter-Front-end/static/media/youtube.a51ab7ed.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0d55afbb.js",
-    "static/js/2.0b901a04.chunk.js",
-    "static/css/main.bae1dab2.chunk.css",
-    "static/js/main.46490489.chunk.js"
+    "static/js/2.6ba204b2.chunk.js",
+    "static/css/main.85d5b059.chunk.css",
+    "static/js/main.dfd71dce.chunk.js"
   ]
 }

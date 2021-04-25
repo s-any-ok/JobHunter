@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/JobHunter-Front-end/precache-manifest.f9e4dd7f00d33408fd7f2dc6a14176a0.js"
+  "/JobHunter-Front-end/precache-manifest.b9504897e8b53587c4d7c1802922bf9f.js"
 );
 
 self.addEventListener('message', (event) => {
